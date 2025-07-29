@@ -1,2 +1,3 @@
 # battery-cable
-Conntect to battery
+
+Connect to Battery.
