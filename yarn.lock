@@ -1872,8 +1872,8 @@ __metadata:
   linkType: hard
 
 "@supabase/postgres-meta@npm:^0.91.1":
-  version: 0.91.3
-  resolution: "@supabase/postgres-meta@npm:0.91.3"
+  version: 0.91.4
+  resolution: "@supabase/postgres-meta@npm:0.91.4"
   dependencies:
     "@fastify/cors": "npm:^9.0.1"
     "@fastify/swagger": "npm:^8.2.1"
@@ -1894,7 +1894,7 @@ __metadata:
     postgres-array: "npm:^3.0.1"
     prettier: "npm:^3.3.3"
     prettier-plugin-sql: "npm:0.17.1"
-  checksum: 10c0/0961d90e216a805a634b36bdb2da64278f56d58ac345cce8258157b269acdfd8ddaca333cd7158a130a936c6f24a3b3a5a556bb39759808c184de397168597b6
+  checksum: 10c0/578a9a7b0e20530f0b721010ccccb9e4fd42741a55aaf88b45da7d3240f70edf57374692bbef694cf2266b941c2dd56eef0888d0a8f8144621c084ef76a0cb2e
   languageName: node
   linkType: hard
 
