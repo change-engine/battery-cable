@@ -1,23 +1,13 @@
 #!/usr/bin/env node
 
-import {
-  PostgresMeta,
-  type PostgresFunction,
-  type PostgresMaterializedView,
-  type PostgresRelationship,
-  type PostgresType,
-  type PostgresView,
-} from "@supabase/postgres-meta";
-import { compile, type JSONSchema } from "json-schema-to-typescript";
+import { PostgresMeta } from "@supabase/postgres-meta";
+import { compile } from "json-schema-to-typescript";
 import fs from "node:fs";
 import prettier from "prettier";
 
-const SCHEAMS = process.argv?.[2]!.split(",");
+const SCHEAMS = process.argv[2].split(",");
 
-const pgTypeToTsType = (
-  pgType: string | undefined,
-  types: PostgresType[],
-): string => {
+const pgTypeToTsType = (pgType, types) => {
   if (!pgType) return "unknown";
   if (pgType === "void") return "undefined";
   if (pgType[0] === "_")
@@ -35,7 +25,7 @@ const pgTypeToTsType = (
     )
     .find((type) => type.name === pgType && type.attributes.length > 0);
   if (compositeType) {
-    if (schemas!.some(({ name }) => name === compositeType.schema)) {
+    if (schemas.some(({ name }) => name === compositeType.schema)) {
       return `Database[${JSON.stringify(compositeType.schema)}]["CompositeTypes"][${JSON.stringify(
         compositeType.name,
       )}]`;
@@ -44,37 +34,29 @@ const pgTypeToTsType = (
   return pgType;
 };
 
-const replaceLast = (txt: string, find: string, replace: string): string => {
+const replaceLast = (txt, find, replace) => {
   const index = txt.lastIndexOf(find);
   if (index === -1) return txt;
   return txt.substring(0, index) + replace + txt.substring(index + find.length);
 };
 
-const jsonSchemaToTsType = async (jsonSchema: string): Promise<string> => {
-  const result = await compile(
-    JSON.parse(jsonSchema) as JSONSchema,
-    "MySchema",
-    {
-      bannerComment: "",
-      additionalProperties: false,
-    },
-  );
+const jsonSchemaToTsType = async (jsonSchema) => {
+  const result = await compile(JSON.parse(jsonSchema), "MySchema", {
+    bannerComment: "",
+    additionalProperties: false,
+  });
 
   const [, data] = result.split("export interface GeneratedSchemaForRoot ");
-  return data!;
+  return data;
 };
 
-const getNonNullFields = (comment: string | null): Set<string> => {
+const getNonNullFields = (comment) => {
   if (!comment) return new Set();
   const match = comment.match(/NON_NULL_FIELDS:\s*([\w,]+)/);
-  return match ? new Set(match[1]!.split(",")) : new Set();
+  return match ? new Set(match[1].split(",")) : new Set();
 };
 
-const generateViewTypes = async (
-  view: PostgresView | PostgresMaterializedView,
-  types: PostgresType[],
-  relationships: PostgresRelationship[],
-): Promise<string> => {
+const generateViewTypes = async (view, types, relationships) => {
   const nonNullFields = getNonNullFields(view.comment);
 
   const columns = await Promise.all(
@@ -119,16 +101,7 @@ ${relationshipsForView.join("\n")}
       };`;
 };
 
-const columnToTsType = async (
-  c: {
-    comment: string | null;
-    format: string;
-    identity_generation: string | null;
-    is_nullable: boolean;
-  },
-  types: PostgresType[],
-  read = true,
-): Promise<string> =>
+const columnToTsType = async (c, types, read = true) =>
   !read && c.identity_generation === "ALWAYS"
     ? "never"
     : (c.comment?.startsWith("TYPE: ")
@@ -137,11 +110,7 @@ const columnToTsType = async (
           ? await jsonSchemaToTsType(c.comment.substring(12))
           : pgTypeToTsType(c.format, types)) + (c.is_nullable ? " | null" : "");
 
-const ok: <T>(
-  a: Promise<
-    { data: null; error: { message: string } } | { data: T; error: null }
-  >,
-) => Promise<T> = async (r) => {
+const ok = async (r) => {
   const { data, error } = await r;
   if (error) throw new Error(error.message);
   return data;
@@ -174,21 +143,16 @@ const [
   ok(pgMeta.relationships.list()),
 ]);
 
-async function generateSchemaFunctions(
-  schemaFunctions: PostgresFunction[],
-): Promise<string> {
+async function generateSchemaFunctions(schemaFunctions) {
   if (schemaFunctions.length === 0) {
     return "      [_ in never]: never";
   }
 
-  const schemaFunctionsGroupedByName = schemaFunctions.reduce(
-    (acc, curr) => {
-      acc[curr.name] ??= [];
-      acc[curr.name]!.push(curr);
-      return acc;
-    },
-    {} as Record<string, PostgresFunction[]>,
-  );
+  const schemaFunctionsGroupedByName = schemaFunctions.reduce((acc, curr) => {
+    acc[curr.name] ??= [];
+    acc[curr.name].push(curr);
+    return acc;
+  }, {});
 
   return (
     await Promise.all(
@@ -213,8 +177,8 @@ async function generateSchemaFunctions(
               return {
                 name,
                 type: pgTypeToTsType(
-                  types!.find(({ id }) => id === type_id)?.name,
-                  types!,
+                  types.find(({ id }) => id === type_id)?.name,
+                  types,
                 ),
                 has_default,
               };
@@ -238,14 +202,14 @@ ${tableArgs
   .map(
     ({ name, type_id }) =>
       `          ${name}: ${pgTypeToTsType(
-        types!.find(({ id }) => id === type_id)?.name,
-        types!,
+        types.find(({ id }) => id === type_id)?.name,
+        types,
       )};`,
   )
   .join("\n")}
         }`;
           }
-          const relation = [...tables!, ...views!].find(
+          const relation = [...tables, ...views].find(
             ({ id }) => id === return_type_relation_id,
           );
           if (relation) {
@@ -256,15 +220,15 @@ ${(
       .sort(({ name: a }, { name: b }) => a.localeCompare(b))
       .map(
         async (column) =>
-          `          ${column.name}: ${await columnToTsType(column, types!)};`,
+          `          ${column.name}: ${await columnToTsType(column, types)};`,
       ),
   )
 ).join("\n")}
         }`;
           }
-          const type = types!.find(({ id }) => id === return_type_id);
+          const type = types.find(({ id }) => id === return_type_id);
           if (type) {
-            return pgTypeToTsType(type.name, types!);
+            return pgTypeToTsType(type.name, types);
           }
           return "unknown";
         })()}${is_set_returning_function ? "[];" : ";"}
@@ -287,24 +251,24 @@ ${fs.readFileSync("src/__definitions__/type-definitions.ts", "utf-8")}
 export interface Database {
 ${(
   await Promise.all(
-    schemas!
+    schemas
       .filter(({ name }) => SCHEAMS.includes(name))
       .sort(({ name: a }, { name: b }) => a.localeCompare(b))
       .map(async (schema) => {
-        const schemaTables = tables!
+        const schemaTables = tables
           .filter((table) => table.schema === schema.name)
           .sort(({ name: a }, { name: b }) => a.localeCompare(b));
-        const schemaViews = [...views!, ...materializedViews!]
+        const schemaViews = [...views, ...materializedViews]
           .filter((view) => view.schema === schema.name)
           .sort(({ name: a }, { name: b }) => a.localeCompare(b));
-        const schemaFunctions = functions!
+        const schemaFunctions = functions
           .filter(
             (func) =>
               func.schema === schema.name &&
               !["trigger", "event_trigger"].includes(func.return_type),
           )
           .sort(({ name: a }, { name: b }) => a.localeCompare(b));
-        const schemaCompositeTypes = types!
+        const schemaCompositeTypes = types
           .filter(
             (type) => type.schema === schema.name && type.attributes.length > 0,
           )
@@ -325,14 +289,14 @@ ${[
       .sort(({ name: a }, { name: b }) => a.localeCompare(b))
       .map(
         async (column) =>
-          `          ${column.name}: ${await columnToTsType(column, types!)};`,
+          `          ${column.name}: ${await columnToTsType(column, types)};`,
       ),
   )),
   ...schemaFunctions
     .filter((fn) => fn.argument_types === table.name)
     .map(
       (fn) =>
-        `        ${fn.name}: ${pgTypeToTsType(fn.return_type, types!)} | null`,
+        `        ${fn.name}: ${pgTypeToTsType(fn.return_type, types)} | null`,
     ),
 ].join("\n")}
         };
@@ -345,8 +309,8 @@ ${(
         column.is_nullable ||
         column.is_identity ||
         column.default_value !== null
-          ? `          ${column.name}?: ${await columnToTsType(column, types!, false)};`
-          : `          ${column.name}: ${await columnToTsType(column, types!, false)};`,
+          ? `          ${column.name}?: ${await columnToTsType(column, types, false)};`
+          : `          ${column.name}: ${await columnToTsType(column, types, false)};`,
       ),
   )
 ).join("\n")}
@@ -358,13 +322,13 @@ ${(
       .sort(({ name: a }, { name: b }) => a.localeCompare(b))
       .map(
         async (column) =>
-          `          ${column.name}?: ${await columnToTsType(column, types!, false)};`,
+          `          ${column.name}?: ${await columnToTsType(column, types, false)};`,
       ),
   )
 ).join("\n")}
         };
         Relationships: [
-${relationships!
+${relationships
   .filter((rel) => table.schema === rel.schema && table.name === rel.relation)
   .sort((a, b) =>
     a.foreign_key_name < b.foreign_key_name
@@ -397,7 +361,7 @@ ${
     : (
         await Promise.all(
           schemaViews.map((view) =>
-            generateViewTypes(view, types!, relationships!),
+            generateViewTypes(view, types, relationships),
           ),
         )
       ).join("\n")
@@ -416,9 +380,9 @@ ${
             `      ${name}: {
 ${attributes
   .map(({ name: aName, type_id }) => {
-    const type = types!.find(({ id }) => id === type_id);
+    const type = types.find(({ id }) => id === type_id);
     if (type) {
-      return `        ${aName}: ${pgTypeToTsType(type.name, types!)} | null;`;
+      return `        ${aName}: ${pgTypeToTsType(type.name, types)} | null;`;
     }
     return `        ${aName}: unknown`;
   })
@@ -434,11 +398,11 @@ ${attributes
 ).join("\n")}
 ${(
   await Promise.all(
-    schemas!
+    schemas
       .filter(({ name }) => !SCHEAMS.includes(name))
       .sort(({ name: a }, { name: b }) => a.localeCompare(b))
       .map((schema) => {
-        const schemaCompositeTypes = types!
+        const schemaCompositeTypes = types
           .filter(
             (type) => type.schema === schema.name && type.attributes.length > 0,
           )
@@ -457,9 +421,9 @@ ${
             `      ${name}: {
 ${attributes
   .map(({ name: aName, type_id }) => {
-    const type = types!.find(({ id }) => id === type_id);
+    const type = types.find(({ id }) => id === type_id);
     if (type) {
-      return `        ${aName}: ${pgTypeToTsType(type.name, types!)} | null;`;
+      return `        ${aName}: ${pgTypeToTsType(type.name, types)} | null;`;
     }
     return `        ${aName}: unknown`;
   })
