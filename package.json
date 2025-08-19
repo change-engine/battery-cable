@@ -1,6 +1,6 @@
 {
   "bin": {
-    "db-types": "./bin/db-types.mjs"
+    "db-types": "./bin/db-types.ts"
   },
   "description": "Connect to Battery.",
   "engines": {
@@ -16,19 +16,19 @@
   "name": "battery-cable",
   "packageManager": "yarn@4.6.0",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "devDependencies": {
     "@types/eslint": "^9.6.1",
-    "eslint": "^9.31.0",
-    "eslint-config-two-stroke": "^1.2.1",
-    "two-stroke": "^5.2.6",
-    "typescript": "^5.8.3"
+    "eslint": "^9.33.0",
+    "eslint-config-two-stroke": "^1.2.7",
+    "two-stroke": "^5.8.0",
+    "typescript": "^5.9.2"
   },
   "resolutions": {
     "libpg-query": "17.1.1"
   },
   "dependencies": {
-    "@supabase/postgres-meta": "^0.91.1",
+    "@supabase/postgres-meta": "^0.91.5",
     "json-schema-to-typescript": "^15.0.4",
     "prettier": "^3.6.2"
   }
