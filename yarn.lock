@@ -2480,7 +2480,7 @@ __metadata:
     eslint-config-two-stroke: "npm:^1.2.1"
     json-schema-to-typescript: "npm:^15.0.4"
     prettier: "npm:^3.6.2"
-    two-stroke: "npm:^5.2.6"
+    two-stroke: "npm:^6.0.0"
     typescript: "npm:^5.8.3"
   bin:
     db-types: ./bin/db-types.mjs
@@ -5996,9 +5996,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"two-stroke@npm:^5.2.6":
-  version: 5.8.1
-  resolution: "two-stroke@npm:5.8.1"
+"two-stroke@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "two-stroke@npm:6.0.0"
   dependencies:
     "@cloudflare/vitest-pool-workers": "npm:^0.8.65"
     "@cloudflare/workers-types": "npm:^4.20250819.0"
@@ -6035,7 +6035,7 @@ __metadata:
     lint: ./bin/lint.mjs
     test: ./bin/test.mjs
     type-check: ./bin/type-check.mjs
-  checksum: 10c0/586d97649db4ca8a9e60792e9e0212367b51d2d438eaf1b50b84732117eb6180b2e206b54bf9620e25c65d055ac1e67de2953a148858ad973d18a062e6afef94
+  checksum: 10c0/894511e9b5b78363c9f86029f06be8061a6b8730b2a7e9a655fa24a601149992e73c089f6d9680340fcee18010954697ab3a3f4149852af606c610572cafa962
   languageName: node
   linkType: hard
 
