@@ -442,7 +442,7 @@ ${attributes
 export interface DatabaseWithOptions {
   db: Database
   options: {
-    PostgrestVersion: "12"
+    PostgrestVersion: "13"
   }
 }
 `,
