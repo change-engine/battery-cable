@@ -16,19 +16,19 @@
   "name": "battery-cable",
   "packageManager": "yarn@4.6.0",
   "type": "module",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "devDependencies": {
     "@types/eslint": "^9.6.1",
-    "eslint": "^9.33.0",
-    "eslint-config-two-stroke": "^1.2.7",
-    "two-stroke": "^6.0.0",
+    "eslint": "^9.35.0",
+    "eslint-config-two-stroke": "^1.2.8",
+    "two-stroke": "^6.0.1",
     "typescript": "^5.9.2"
   },
   "resolutions": {
     "libpg-query": "17.1.1"
   },
   "dependencies": {
-    "@supabase/postgres-meta": "^0.91.5",
+    "@supabase/postgres-meta": "^0.91.6",
     "json-schema-to-typescript": "^15.0.4",
     "prettier": "^3.6.2"
   }

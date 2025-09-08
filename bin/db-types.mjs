@@ -105,7 +105,7 @@ const columnToTsType = async (c, types, read = true) =>
   !read && c.identity_generation === "ALWAYS"
     ? "never"
     : (c.comment?.startsWith("TYPE: ")
-        ? c.comment.substring(6).replace("UnlayerDesignBlock", "Json")
+        ? c.comment.substring(6)
         : c.comment?.startsWith("JSON_SCHEMA: ")
           ? await jsonSchemaToTsType(c.comment.substring(12))
           : pgTypeToTsType(c.format, types)) + (c.is_nullable ? " | null" : "");
