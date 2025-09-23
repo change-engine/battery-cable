@@ -16,12 +16,12 @@
   "name": "battery-cable",
   "packageManager": "yarn@4.6.0",
   "type": "module",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "devDependencies": {
     "@types/eslint": "^9.6.1",
-    "eslint": "^9.35.0",
-    "eslint-config-two-stroke": "^1.2.8",
-    "two-stroke": "^6.0.1",
+    "eslint": "^9.36.0",
+    "eslint-config-two-stroke": "^1.2.10",
+    "two-stroke": "^6.0.2",
     "typescript": "^5.9.2"
   },
   "resolutions": {
