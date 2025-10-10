@@ -5941,8 +5941,8 @@ __metadata:
   linkType: hard
 
 "two-stroke@npm:^6.1.1":
-  version: 6.1.1
-  resolution: "two-stroke@npm:6.1.1"
+  version: 6.2.0
+  resolution: "two-stroke@npm:6.2.0"
   dependencies:
     "@cloudflare/vitest-pool-workers": "npm:^0.9.11"
     "@cloudflare/workers-types": "npm:^4.20251008.0"
@@ -5979,7 +5979,7 @@ __metadata:
     lint: ./bin/lint.mjs
     test: ./bin/test.mjs
     type-check: ./bin/type-check.mjs
-  checksum: 10c0/093481a9d843402ff423bbaea94a6b40f8de611d589611273d6cb62c77d493db1b9846e8a368a2e8678bbf8e8c824e058359a14490f683daf058b5d8b56e60b4
+  checksum: 10c0/f3408e2174d79299ff3723af1bf0112c3c4aed6b9d57877140ad2ccc119aca86e6856f1b5e4d74d3ff86e92a106a1978a48f240a846bbc146fa871cd472d2e88
   languageName: node
   linkType: hard
 
