@@ -1874,9 +1874,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@supabase/postgres-meta@npm:^0.92.0":
-  version: 0.92.0
-  resolution: "@supabase/postgres-meta@npm:0.92.0"
+"@supabase/postgres-meta@npm:^0.93.0":
+  version: 0.93.0
+  resolution: "@supabase/postgres-meta@npm:0.93.0"
   dependencies:
     "@fastify/cors": "npm:^9.0.1"
     "@fastify/swagger": "npm:^8.2.1"
@@ -1897,7 +1897,7 @@ __metadata:
     postgres-array: "npm:^3.0.1"
     prettier: "npm:^3.3.3"
     prettier-plugin-sql: "npm:0.17.1"
-  checksum: 10c0/b3f718f4c576ba63a961360e370081372514fcf80c8134fa07eb1e751aa7f4610d22d073957c23195f8390b691438c7bac61929b2c7b7b0a8f1ba3793a055f12
+  checksum: 10c0/f5fe763e6717edcba21982ed43a39570f55b377b445e654be6340be0033611a1881b9296c07203815006f40092636ce2512edc077466d27068c31fad89762f9b
   languageName: node
   linkType: hard
 
@@ -2477,7 +2477,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "battery-cable@workspace:."
   dependencies:
-    "@supabase/postgres-meta": "npm:^0.92.0"
+    "@supabase/postgres-meta": "npm:^0.93.0"
     "@types/eslint": "npm:^9.6.1"
     eslint: "npm:^9.37.0"
     eslint-config-two-stroke: "npm:^1.2.12"
