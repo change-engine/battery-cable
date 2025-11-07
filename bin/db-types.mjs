@@ -305,6 +305,7 @@ ${(
   await Promise.all(
     table.columns
       .sort(({ name: a }, { name: b }) => a.localeCompare(b))
+      .filter((column) => !column.comment?.startsWith("READONLY:"))
       .map(async (column) =>
         column.is_nullable ||
         column.is_identity ||
@@ -320,6 +321,7 @@ ${(
   await Promise.all(
     table.columns
       .sort(({ name: a }, { name: b }) => a.localeCompare(b))
+      .filter((column) => !column.comment?.startsWith("READONLY:"))
       .map(
         async (column) =>
           `          ${column.name}?: ${await columnToTsType(column, types, false)};`,
