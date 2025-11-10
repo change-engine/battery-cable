@@ -23,7 +23,7 @@
     "eslint-config-two-stroke": "^1.2.15",
     "two-stroke": "^6.2.3",
     "typescript": "^5.9.3",
-    "vitest": "<4"
+    "vitest": "<5"
   },
   "resolutions": {
     "libpg-query": "17.1.1"
