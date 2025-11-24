@@ -204,7 +204,7 @@ ${tableArgs
       `          ${name}: ${pgTypeToTsType(
         types.find(({ id }) => id === type_id)?.name,
         types,
-      )};`,
+      )} | null;`,
   )
   .join("\n")}
         }`;
