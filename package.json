@@ -4,7 +4,7 @@
   },
   "description": "Connect to Battery.",
   "engines": {
-    "node": "^22.16.0"
+    "node": "^24.9.0"
   },
   "eslintConfig": {
     "extends": [
@@ -14,7 +14,7 @@
   "license": "MIT",
   "main": "src/index.ts",
   "name": "battery-cable",
-  "packageManager": "yarn@4.6.0",
+  "packageManager": "pnpm@10.18.2+sha1.48588a2735db5f19ffe699240b59891cfac5f316",
   "type": "module",
   "version": "0.6.1",
   "devDependencies": {
