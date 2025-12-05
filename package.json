@@ -29,7 +29,7 @@
     "libpg-query": "17.1.1"
   },
   "dependencies": {
-    "@supabase/postgres-meta": "^0.93.1",
+    "@supabase/postgres-meta": "^0.95.0",
     "json-schema-to-typescript": "^15.0.4",
     "prettier": "^3.6.2"
   }
