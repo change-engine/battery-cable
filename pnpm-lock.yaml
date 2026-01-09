@@ -13,7 +13,7 @@ importers:
     dependencies:
       '@supabase/postgres-meta':
         specifier: ^0.95.0
-        version: 0.95.1(encoding@0.1.13)
+        version: 0.95.2(encoding@0.1.13)
       json-schema-to-typescript:
         specifier: ^15.0.4
         version: 15.0.4
@@ -29,16 +29,16 @@ importers:
         version: 9.39.2
       eslint-config-two-stroke:
         specifier: ^1.2.16
-        version: 1.3.1(@types/eslint@9.6.1)(eslint@9.39.2)(prettier@3.7.4)(typescript@5.9.3)(vitest@3.2.4(@types/node@25.0.1)(yaml@2.8.2))
+        version: 1.3.1(@types/eslint@9.6.1)(eslint@9.39.2)(prettier@3.7.4)(typescript@5.9.3)(vitest@3.2.4(@types/node@25.0.3)(yaml@2.8.2))
       two-stroke:
         specifier: ^6.2.4
-        version: 6.3.1(@sentry/cli@2.58.2(encoding@0.1.13))(@types/eslint@9.6.1)(@vitest/runner@3.2.4)(@vitest/snapshot@3.2.4)(eslint@9.39.2)(prettier@3.7.4)(typescript@5.9.3)(vitest@3.2.4(@types/node@25.0.1)(yaml@2.8.2))(wrangler@4.52.0(@cloudflare/workers-types@4.20251202.0))
+        version: 6.3.1(@sentry/cli@2.58.2(encoding@0.1.13))(@types/eslint@9.6.1)(@vitest/runner@3.2.4)(@vitest/snapshot@3.2.4)(eslint@9.39.2)(prettier@3.7.4)(typescript@5.9.3)(vitest@3.2.4(@types/node@25.0.3)(yaml@2.8.2))(wrangler@4.52.0(@cloudflare/workers-types@4.20251202.0))
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
       vitest:
         specifier: <4
-        version: 3.2.4(@types/node@25.0.1)(yaml@2.8.2)
+        version: 3.2.4(@types/node@25.0.3)(yaml@2.8.2)
 
 packages:
 
@@ -173,8 +173,8 @@ packages:
   '@emnapi/runtime@0.43.1':
     resolution: {integrity: sha512-Q5sMc4Z4gsD4tlmlyFu+MpNAwpR7Gv2errDhVJ+SOhNjWcx8UTqy+hswb8L31RfC8jBvDgcnT87l3xI2w08rAg==}
 
-  '@emnapi/runtime@1.7.1':
-    resolution: {integrity: sha512-PVtJr5CmLwYAU9PZDMITZoR5iAOShYREoR45EyyLrbntV50mdePTgUn4AmOw90Ifcj+x2kRjdzr1HP3RrNiHGA==}
+  '@emnapi/runtime@1.8.1':
+    resolution: {integrity: sha512-mehfKSMWjjNol8659Z8KxEMrdSJDDot5SXMq00dM8BN4o+CLNXQ0xH2V7EchNHV4RmbZLmmPdEaXZc5H2FXmDg==}
 
   '@esbuild/aix-ppc64@0.25.12':
     resolution: {integrity: sha512-Hhmwd6CInZ3dwpuGTF8fJG6yoWmsToE+vYgD4nytZVxcu1ulHpUQRAB1UJ8+N1Am3Mz4+xOByoQoSZf4D+CpkA==}
@@ -1236,8 +1236,8 @@ packages:
       pg-native:
         optional: true
 
-  '@supabase/postgres-meta@0.95.1':
-    resolution: {integrity: sha512-cvIAv1MOmodmvlOawS9mQDseOOx+kCVBMwGtBXSoBhT3euc8YXnTNWzydzU7JRcdnALmFhFSNXq+kFVPJpwLDg==}
+  '@supabase/postgres-meta@0.95.2':
+    resolution: {integrity: sha512-WO0Vr5kNIbiTjlAkQoZjRg56EYFYZ2SCqzlK5gGORQlu1cLyeSUdGXFzzkJKQLWxPctuKR+Qk2YI8sZFBvYowQ==}
     engines: {node: '>=20', npm: '>=9'}
 
   '@types/chai@5.2.3':
@@ -1267,8 +1267,8 @@ packages:
   '@types/node@24.10.1':
     resolution: {integrity: sha512-GNWcUTRBgIRJD5zj+Tq0fKOJ5XZajIiBroOF0yvj2bSU1WvNdYS/dn9UxwsujGW4JX06dnHyjV2y9rRaybH0iQ==}
 
-  '@types/node@25.0.1':
-    resolution: {integrity: sha512-czWPzKIAXucn9PtsttxmumiQ9N0ok9FrBwgRWrwmVLlp86BrMExzvXRLFYRJ+Ex3g6yqj+KuaxfX1JTgV2lpfg==}
+  '@types/node@25.0.3':
+    resolution: {integrity: sha512-W609buLVRVmeW693xKfzHeIV6nJGGz98uCPfeXI1ELMLXVeKYZ9m15fAMSaUPBHYLGFsVRcMmSCksQOrZV9BYA==}
 
   '@types/pg-pool@2.0.6':
     resolution: {integrity: sha512-TaAUE5rq2VQYxab5Ts7WZhKNmuN78Q6PiFonTDdpbx8a1H0M1vhy3rhiMjl+e2iHmogyMw7jZF4FrE6eJUy5HQ==}
@@ -1592,8 +1592,8 @@ packages:
     resolution: {integrity: sha512-4diC9HaTE+KRAMWhDhrGOECgWZxoevMc5TlkObMqNSsVU62PYzXZ/SMTjzyGAFF1YusgxGcSWTEXBhp0CPwQ1A==}
     engines: {node: '>=6'}
 
-  close-with-grace@2.3.0:
-    resolution: {integrity: sha512-38BS9BuqAml6XFIlSWQcj3eivE05yFV6cJDuYoNGiHrE+h9ud1JtMJIVKXdLWa2Uo2Xt7q/GYczOesEchvBEsw==}
+  close-with-grace@2.4.0:
+    resolution: {integrity: sha512-bzAYS0Kax7I0ejiCFHVshsT9giz6MrOpkdpP1CEGpkDRG3mXVgHZ9QdzVGHRZR0jrAq6JyN1mB4Ty3ILnmzLdg==}
 
   color-convert@2.0.1:
     resolution: {integrity: sha512-RRECPsj7iu/xb5oKYcsFHSppFNnsj/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+CRDpfK/U584fMg38ZHCaElKQ==}
@@ -1893,8 +1893,8 @@ packages:
   fastify@4.29.1:
     resolution: {integrity: sha512-m2kMNHIG92tSNWv+Z3UeTR9AWLLuo7KctC7mlFPtMEVrfjIhmQhkQnT9v15qA/BfVq3vvj134Y0jl9SBje3jXQ==}
 
-  fastq@1.19.1:
-    resolution: {integrity: sha512-GwLTyxkCXjXbxqIhTsMI2Nui8huMPtnxg7krajPJAjnEG/iiOS7i+zCtWGZR9G0NBKbXKh6X9m9UIsYX/N6vvQ==}
+  fastq@1.20.1:
+    resolution: {integrity: sha512-GGToxJ/w1x32s/D2EKND7kTil4n8OVk/9mycTc4VDza13lOvpUZTGX3mFSCtV9ksdGBVzvsyAVLM6mHFThxXxw==}
 
   fdir@6.5.0:
     resolution: {integrity: sha512-tIbYtZbucOs0BRGqPJkshJUYdL+SDH7dVM8gjy+ERp3WAUjLEFJE+02kanyHtwjWOnwrKYBiwAmM0p4kLJAnXg==}
@@ -2196,8 +2196,8 @@ packages:
     engines: {node: '>=6'}
     hasBin: true
 
-  jsox@1.2.124:
-    resolution: {integrity: sha512-KwptI8xUfOt7qJ+P+2utrJIEHTgDjXpBsDhPSM4GDq++4by+LX9nUFee97QfRloGcMh5iA9Ha/4UCVZl7zWzuA==}
+  jsox@1.2.125:
+    resolution: {integrity: sha512-HIf1uwublnXZsy7p3yHTrhzMzrLO6xKnqXytT9pEil5QxaXi8eyer7Is4luF5hYSV4kD3v03Y32FWoAeVYTghQ==}
     hasBin: true
 
   jwk-subtle@1.1.3:
@@ -2535,11 +2535,11 @@ packages:
   pgpass@1.0.5:
     resolution: {integrity: sha512-FdW9r/jQZhSeohs1Z3sI1yxFQNFvMcnmfuj4WBMUTxOrAyLMaTcE1aAMBiTlbMNaXvBCQuVi0R7hd8udDSP7ug==}
 
-  pgsql-deparser@17.12.2:
-    resolution: {integrity: sha512-R/2BFqeAhUWK64c8RluoXR2f2+U/UZAPRG7KFsTXzrTX3HUQsYK/IYaWRyzJCST/HmeGXMLtXq3UeSd7xTUmOw==}
+  pgsql-deparser@17.17.2:
+    resolution: {integrity: sha512-FCjqKY3Sdmce3VUd3CxCXF0kqaZ0s4a6yIMT5UJ9vETh0cF54A8Tpqjn0qBKaPUD8xqTKeLdS+SfiwjAC64wrA==}
 
-  pgsql-parser@17.9.2:
-    resolution: {integrity: sha512-1S8nva/PkJBr8oBT6xIEVpUPupd4WqqKH9sPGlk3t1hbehF0Fp3O3DskQ3dOZctEsnK62pIrqCImngWkvRzaJA==}
+  pgsql-parser@17.9.11:
+    resolution: {integrity: sha512-Bqp9uLvJK0Qht9PXzI6eC/Fn+lFRL+2eMvXss4D4qt7lxPLIHS8FMKYOHUQNTI3m6ylExSOdNXhx/DL5UGm3xg==}
 
   picocolors@1.1.1:
     resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==}
@@ -2578,8 +2578,8 @@ packages:
     resolution: {integrity: sha512-nAUSGfSDGOaOAEGwqsRY27GPOea7CNipJPOA7lPbdEpx5Kg3qzdP0AaWC5MlhTWV9s4hFX39nomVZ+C4tnGOJQ==}
     engines: {node: '>=12'}
 
-  postgres-bytea@1.0.0:
-    resolution: {integrity: sha512-xy3pmLuQqRBZBXDULy7KbaitYqLcmxigw14Q5sj8QBVLqEwXfeybIKVWiqAXTlcvdvb0+xkOtDbfQMOf4lST1w==}
+  postgres-bytea@1.0.1:
+    resolution: {integrity: sha512-5+5HqXnsZPE65IJZSMkZtURARZelel2oXUEO8rH83VS/hxH5vv1uHquPg5wZs8yMAfdv971IU+kcPUczi7NVBQ==}
     engines: {node: '>=0.10.0'}
 
   postgres-date@1.0.7:
@@ -3296,7 +3296,7 @@ snapshots:
     optionalDependencies:
       workerd: 1.20251128.0
 
-  '@cloudflare/vitest-pool-workers@0.10.12(@cloudflare/workers-types@4.20251202.0)(@vitest/runner@3.2.4)(@vitest/snapshot@3.2.4)(vitest@3.2.4(@types/node@25.0.1)(yaml@2.8.2))':
+  '@cloudflare/vitest-pool-workers@0.10.12(@cloudflare/workers-types@4.20251202.0)(@vitest/runner@3.2.4)(@vitest/snapshot@3.2.4)(vitest@3.2.4(@types/node@25.0.3)(yaml@2.8.2))':
     dependencies:
       '@vitest/runner': 3.2.4
       '@vitest/snapshot': 3.2.4
@@ -3305,7 +3305,7 @@ snapshots:
       devalue: 5.5.0
       miniflare: 4.20251128.0
       semver: 7.7.3
-      vitest: 3.2.4(@types/node@25.0.1)(yaml@2.8.2)
+      vitest: 3.2.4(@types/node@25.0.3)(yaml@2.8.2)
       wrangler: 4.52.0(@cloudflare/workers-types@4.20251202.0)
       zod: 3.25.76
     transitivePeerDependencies:
@@ -3338,7 +3338,7 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  '@emnapi/runtime@1.7.1':
+  '@emnapi/runtime@1.8.1':
     dependencies:
       tslib: 2.8.1
     optional: true
@@ -3669,7 +3669,7 @@ snapshots:
 
   '@img/sharp-wasm32@0.33.5':
     dependencies:
-      '@emnapi/runtime': 1.7.1
+      '@emnapi/runtime': 1.8.1
     optional: true
 
   '@img/sharp-win32-ia32@0.33.5':
@@ -3727,7 +3727,7 @@ snapshots:
       '@protobufjs/path': 1.1.2
       '@protobufjs/pool': 1.1.0
       '@protobufjs/utf8': 1.1.0
-      '@types/node': 25.0.1
+      '@types/node': 25.0.3
       long: 5.3.2
 
   '@mapbox/node-pre-gyp@1.0.11(encoding@0.1.13)':
@@ -3755,7 +3755,7 @@ snapshots:
   '@nodelib/fs.walk@1.2.8':
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
-      fastq: 1.19.1
+      fastq: 1.20.1
 
   '@npmcli/agent@2.2.2':
     dependencies:
@@ -4305,7 +4305,7 @@ snapshots:
     transitivePeerDependencies:
       - pg
 
-  '@supabase/postgres-meta@0.95.1(encoding@0.1.13)':
+  '@supabase/postgres-meta@0.95.2(encoding@0.1.13)':
     dependencies:
       '@fastify/cors': 9.0.1
       '@fastify/swagger': 8.15.0
@@ -4313,7 +4313,7 @@ snapshots:
       '@sentry/node': 9.47.1
       '@sentry/profiling-node': 9.47.1
       '@sinclair/typebox': 0.31.28
-      close-with-grace: 2.3.0
+      close-with-grace: 2.4.0
       crypto-js: 4.2.0
       fastify: 4.29.1
       fastify-metrics: 10.6.0(fastify@4.29.1)
@@ -4321,7 +4321,7 @@ snapshots:
       pg-connection-string: 2.9.1
       pg-format: 1.0.4
       pg-protocol: '@supabase/pg-protocol@0.0.2'
-      pgsql-parser: 17.9.2(encoding@0.1.13)
+      pgsql-parser: 17.9.11(encoding@0.1.13)
       pino: 9.14.0
       postgres-array: 3.0.4
       prettier: 3.7.4
@@ -4338,7 +4338,7 @@ snapshots:
 
   '@types/connect@3.4.38':
     dependencies:
-      '@types/node': 25.0.1
+      '@types/node': 25.0.3
 
   '@types/deep-eql@4.0.2': {}
 
@@ -4355,13 +4355,13 @@ snapshots:
 
   '@types/mysql@2.15.26':
     dependencies:
-      '@types/node': 25.0.1
+      '@types/node': 25.0.3
 
   '@types/node@24.10.1':
     dependencies:
       undici-types: 7.16.0
 
-  '@types/node@25.0.1':
+  '@types/node@25.0.3':
     dependencies:
       undici-types: 7.16.0
 
@@ -4371,7 +4371,7 @@ snapshots:
 
   '@types/pg@8.6.1':
     dependencies:
-      '@types/node': 25.0.1
+      '@types/node': 25.0.3
       pg-protocol: 1.10.3
       pg-types: 2.2.0
 
@@ -4379,7 +4379,7 @@ snapshots:
 
   '@types/tedious@4.0.14':
     dependencies:
-      '@types/node': 25.0.1
+      '@types/node': 25.0.3
 
   '@typescript-eslint/eslint-plugin@8.48.1(@typescript-eslint/parser@8.48.1(eslint@9.39.2)(typescript@5.9.3))(eslint@9.39.2)(typescript@5.9.3)':
     dependencies:
@@ -4511,7 +4511,7 @@ snapshots:
       '@typescript-eslint/types': 8.48.1
       eslint-visitor-keys: 4.2.1
 
-  '@vitest/coverage-istanbul@4.0.15(vitest@3.2.4(@types/node@25.0.1)(yaml@2.8.2))':
+  '@vitest/coverage-istanbul@4.0.15(vitest@3.2.4(@types/node@25.0.3)(yaml@2.8.2))':
     dependencies:
       '@istanbuljs/schema': 0.1.3
       '@jridgewell/gen-mapping': 0.3.13
@@ -4524,7 +4524,7 @@ snapshots:
       magicast: 0.5.1
       obug: 2.1.1
       tinyrainbow: 3.0.3
-      vitest: 3.2.4(@types/node@25.0.1)(yaml@2.8.2)
+      vitest: 3.2.4(@types/node@25.0.3)(yaml@2.8.2)
     transitivePeerDependencies:
       - supports-color
 
@@ -4536,13 +4536,13 @@ snapshots:
       chai: 5.3.3
       tinyrainbow: 2.0.0
 
-  '@vitest/mocker@3.2.4(vite@7.2.6(@types/node@25.0.1)(yaml@2.8.2))':
+  '@vitest/mocker@3.2.4(vite@7.2.6(@types/node@25.0.3)(yaml@2.8.2))':
     dependencies:
       '@vitest/spy': 3.2.4
       estree-walker: 3.0.3
       magic-string: 0.30.21
     optionalDependencies:
-      vite: 7.2.6(@types/node@25.0.1)(yaml@2.8.2)
+      vite: 7.2.6(@types/node@25.0.3)(yaml@2.8.2)
 
   '@vitest/pretty-format@3.2.4':
     dependencies:
@@ -4655,7 +4655,7 @@ snapshots:
   avvio@8.4.0:
     dependencies:
       '@fastify/error': 3.4.1
-      fastq: 1.19.1
+      fastq: 1.20.1
 
   balanced-match@1.0.2: {}
 
@@ -4734,7 +4734,7 @@ snapshots:
 
   clean-stack@2.2.0: {}
 
-  close-with-grace@2.3.0: {}
+  close-with-grace@2.4.0: {}
 
   color-convert@2.0.1:
     dependencies:
@@ -4895,7 +4895,7 @@ snapshots:
     dependencies:
       eslint: 9.39.2
 
-  eslint-config-two-stroke@1.3.1(@types/eslint@9.6.1)(eslint@9.39.2)(prettier@3.7.4)(typescript@5.9.3)(vitest@3.2.4(@types/node@25.0.1)(yaml@2.8.2)):
+  eslint-config-two-stroke@1.3.1(@types/eslint@9.6.1)(eslint@9.39.2)(prettier@3.7.4)(typescript@5.9.3)(vitest@3.2.4(@types/node@25.0.3)(yaml@2.8.2)):
     dependencies:
       '@eslint/compat': 2.0.0(eslint@9.39.2)
       '@eslint/js': 9.39.1
@@ -4906,7 +4906,7 @@ snapshots:
       eslint-config-typescript: 3.0.0(@typescript-eslint/eslint-plugin@8.48.1(@typescript-eslint/parser@8.48.1(eslint@9.39.2)(typescript@5.9.3))(eslint@9.39.2)(typescript@5.9.3))(@typescript-eslint/parser@8.48.1(eslint@9.39.2)(typescript@5.9.3))(eslint@9.39.2)(typescript@5.9.3)
       eslint-plugin-n: 17.23.1(eslint@9.39.2)(typescript@5.9.3)
       eslint-plugin-prettier: 5.5.4(@types/eslint@9.6.1)(eslint-config-prettier@10.1.8(eslint@9.39.2))(eslint@9.39.2)(prettier@3.7.4)
-      eslint-plugin-vitest: 0.5.4(@typescript-eslint/eslint-plugin@8.48.1(@typescript-eslint/parser@8.48.1(eslint@9.39.2)(typescript@5.9.3))(eslint@9.39.2)(typescript@5.9.3))(eslint@9.39.2)(typescript@5.9.3)(vitest@3.2.4(@types/node@25.0.1)(yaml@2.8.2))
+      eslint-plugin-vitest: 0.5.4(@typescript-eslint/eslint-plugin@8.48.1(@typescript-eslint/parser@8.48.1(eslint@9.39.2)(typescript@5.9.3))(eslint@9.39.2)(typescript@5.9.3))(eslint@9.39.2)(typescript@5.9.3)(vitest@3.2.4(@types/node@25.0.3)(yaml@2.8.2))
       prettier: 3.7.4
       typescript-eslint: 8.48.1(eslint@9.39.2)(typescript@5.9.3)
     transitivePeerDependencies:
@@ -4954,13 +4954,13 @@ snapshots:
       '@types/eslint': 9.6.1
       eslint-config-prettier: 10.1.8(eslint@9.39.2)
 
-  eslint-plugin-vitest@0.5.4(@typescript-eslint/eslint-plugin@8.48.1(@typescript-eslint/parser@8.48.1(eslint@9.39.2)(typescript@5.9.3))(eslint@9.39.2)(typescript@5.9.3))(eslint@9.39.2)(typescript@5.9.3)(vitest@3.2.4(@types/node@25.0.1)(yaml@2.8.2)):
+  eslint-plugin-vitest@0.5.4(@typescript-eslint/eslint-plugin@8.48.1(@typescript-eslint/parser@8.48.1(eslint@9.39.2)(typescript@5.9.3))(eslint@9.39.2)(typescript@5.9.3))(eslint@9.39.2)(typescript@5.9.3)(vitest@3.2.4(@types/node@25.0.3)(yaml@2.8.2)):
     dependencies:
       '@typescript-eslint/utils': 7.18.0(eslint@9.39.2)(typescript@5.9.3)
       eslint: 9.39.2
     optionalDependencies:
       '@typescript-eslint/eslint-plugin': 8.48.1(@typescript-eslint/parser@8.48.1(eslint@9.39.2)(typescript@5.9.3))(eslint@9.39.2)(typescript@5.9.3)
-      vitest: 3.2.4(@types/node@25.0.1)(yaml@2.8.2)
+      vitest: 3.2.4(@types/node@25.0.3)(yaml@2.8.2)
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -5106,7 +5106,7 @@ snapshots:
       semver: 7.7.3
       toad-cache: 3.7.0
 
-  fastq@1.19.1:
+  fastq@1.20.1:
     dependencies:
       reusify: 1.1.0
 
@@ -5409,7 +5409,7 @@ snapshots:
 
   json5@2.2.3: {}
 
-  jsox@1.2.124: {}
+  jsox@1.2.125: {}
 
   jwk-subtle@1.1.3: {}
 
@@ -5753,7 +5753,7 @@ snapshots:
     dependencies:
       pg-int8: 1.0.1
       postgres-array: 2.0.0
-      postgres-bytea: 1.0.0
+      postgres-bytea: 1.0.1
       postgres-date: 1.0.7
       postgres-interval: 1.2.0
 
@@ -5761,15 +5761,15 @@ snapshots:
     dependencies:
       split2: 4.2.0
 
-  pgsql-deparser@17.12.2:
+  pgsql-deparser@17.17.2:
     dependencies:
       '@pgsql/types': 17.6.2
 
-  pgsql-parser@17.9.2(encoding@0.1.13):
+  pgsql-parser@17.9.11(encoding@0.1.13):
     dependencies:
       '@pgsql/types': 17.6.2
       libpg-query: 17.1.1(encoding@0.1.13)
-      pgsql-deparser: 17.12.2
+      pgsql-deparser: 17.17.2
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -5812,7 +5812,7 @@ snapshots:
 
   postgres-array@3.0.4: {}
 
-  postgres-bytea@1.0.0: {}
+  postgres-bytea@1.0.1: {}
 
   postgres-date@1.0.7: {}
 
@@ -5828,7 +5828,7 @@ snapshots:
 
   prettier-plugin-sql@0.17.1(prettier@3.7.4):
     dependencies:
-      jsox: 1.2.124
+      jsox: 1.2.125
       node-sql-parser: 4.18.0
       prettier: 3.7.4
       sql-formatter: 14.0.0
@@ -6160,18 +6160,18 @@ snapshots:
 
   tslib@2.8.1: {}
 
-  two-stroke@6.3.1(@sentry/cli@2.58.2(encoding@0.1.13))(@types/eslint@9.6.1)(@vitest/runner@3.2.4)(@vitest/snapshot@3.2.4)(eslint@9.39.2)(prettier@3.7.4)(typescript@5.9.3)(vitest@3.2.4(@types/node@25.0.1)(yaml@2.8.2))(wrangler@4.52.0(@cloudflare/workers-types@4.20251202.0)):
+  two-stroke@6.3.1(@sentry/cli@2.58.2(encoding@0.1.13))(@types/eslint@9.6.1)(@vitest/runner@3.2.4)(@vitest/snapshot@3.2.4)(eslint@9.39.2)(prettier@3.7.4)(typescript@5.9.3)(vitest@3.2.4(@types/node@25.0.3)(yaml@2.8.2))(wrangler@4.52.0(@cloudflare/workers-types@4.20251202.0)):
     dependencies:
-      '@cloudflare/vitest-pool-workers': 0.10.12(@cloudflare/workers-types@4.20251202.0)(@vitest/runner@3.2.4)(@vitest/snapshot@3.2.4)(vitest@3.2.4(@types/node@25.0.1)(yaml@2.8.2))
+      '@cloudflare/vitest-pool-workers': 0.10.12(@cloudflare/workers-types@4.20251202.0)(@vitest/runner@3.2.4)(@vitest/snapshot@3.2.4)(vitest@3.2.4(@types/node@25.0.3)(yaml@2.8.2))
       '@cloudflare/workers-types': 4.20251202.0
       '@sentry/cli': 2.58.2(encoding@0.1.13)
       '@types/node': 24.10.1
       '@typescript-eslint/eslint-plugin': 8.48.1(@typescript-eslint/parser@8.48.1(eslint@9.39.2)(typescript@5.9.3))(eslint@9.39.2)(typescript@5.9.3)
       '@typescript-eslint/parser': 8.48.1(eslint@9.39.2)(typescript@5.9.3)
-      '@vitest/coverage-istanbul': 4.0.15(vitest@3.2.4(@types/node@25.0.1)(yaml@2.8.2))
+      '@vitest/coverage-istanbul': 4.0.15(vitest@3.2.4(@types/node@25.0.3)(yaml@2.8.2))
       eslint: 9.39.2
       eslint-config-prettier: 10.1.8(eslint@9.39.2)
-      eslint-config-two-stroke: 1.3.1(@types/eslint@9.6.1)(eslint@9.39.2)(prettier@3.7.4)(typescript@5.9.3)(vitest@3.2.4(@types/node@25.0.1)(yaml@2.8.2))
+      eslint-config-two-stroke: 1.3.1(@types/eslint@9.6.1)(eslint@9.39.2)(prettier@3.7.4)(typescript@5.9.3)(vitest@3.2.4(@types/node@25.0.3)(yaml@2.8.2))
       eslint-config-typescript: 3.0.0(@typescript-eslint/eslint-plugin@8.48.1(@typescript-eslint/parser@8.48.1(eslint@9.39.2)(typescript@5.9.3))(eslint@9.39.2)(typescript@5.9.3))(@typescript-eslint/parser@8.48.1(eslint@9.39.2)(typescript@5.9.3))(eslint@9.39.2)(typescript@5.9.3)
       jose: 6.1.3
       jwk-subtle: 1.1.3
@@ -6183,7 +6183,7 @@ snapshots:
       prettier: 3.7.4
       toucan-js: 4.1.1
       typescript: 5.9.3
-      vitest: 3.2.4(@types/node@25.0.1)(yaml@2.8.2)
+      vitest: 3.2.4(@types/node@25.0.3)(yaml@2.8.2)
       wrangler: 4.52.0(@cloudflare/workers-types@4.20251202.0)
       zod: 4.1.13
     transitivePeerDependencies:
@@ -6241,13 +6241,13 @@ snapshots:
 
   util-deprecate@1.0.2: {}
 
-  vite-node@3.2.4(@types/node@25.0.1)(yaml@2.8.2):
+  vite-node@3.2.4(@types/node@25.0.3)(yaml@2.8.2):
     dependencies:
       cac: 6.7.14
       debug: 4.4.3(supports-color@10.2.2)
       es-module-lexer: 1.7.0
       pathe: 2.0.3
-      vite: 7.2.6(@types/node@25.0.1)(yaml@2.8.2)
+      vite: 7.2.6(@types/node@25.0.3)(yaml@2.8.2)
     transitivePeerDependencies:
       - '@types/node'
       - jiti
@@ -6262,7 +6262,7 @@ snapshots:
       - tsx
       - yaml
 
-  vite@7.2.6(@types/node@25.0.1)(yaml@2.8.2):
+  vite@7.2.6(@types/node@25.0.3)(yaml@2.8.2):
     dependencies:
       esbuild: 0.25.12
       fdir: 6.5.0(picomatch@4.0.3)
@@ -6271,15 +6271,15 @@ snapshots:
       rollup: 4.53.3
       tinyglobby: 0.2.15
     optionalDependencies:
-      '@types/node': 25.0.1
+      '@types/node': 25.0.3
       fsevents: 2.3.3
       yaml: 2.8.2
 
-  vitest@3.2.4(@types/node@25.0.1)(yaml@2.8.2):
+  vitest@3.2.4(@types/node@25.0.3)(yaml@2.8.2):
     dependencies:
       '@types/chai': 5.2.3
       '@vitest/expect': 3.2.4
-      '@vitest/mocker': 3.2.4(vite@7.2.6(@types/node@25.0.1)(yaml@2.8.2))
+      '@vitest/mocker': 3.2.4(vite@7.2.6(@types/node@25.0.3)(yaml@2.8.2))
       '@vitest/pretty-format': 3.2.4
       '@vitest/runner': 3.2.4
       '@vitest/snapshot': 3.2.4
@@ -6297,11 +6297,11 @@ snapshots:
       tinyglobby: 0.2.15
       tinypool: 1.1.1
       tinyrainbow: 2.0.0
-      vite: 7.2.6(@types/node@25.0.1)(yaml@2.8.2)
-      vite-node: 3.2.4(@types/node@25.0.1)(yaml@2.8.2)
+      vite: 7.2.6(@types/node@25.0.3)(yaml@2.8.2)
+      vite-node: 3.2.4(@types/node@25.0.3)(yaml@2.8.2)
       why-is-node-running: 2.3.0
     optionalDependencies:
-      '@types/node': 25.0.1
+      '@types/node': 25.0.3
     transitivePeerDependencies:
       - jiti
       - less
