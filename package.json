@@ -19,18 +19,18 @@
   "version": "0.7.0",
   "devDependencies": {
     "@types/eslint": "^9.6.1",
-    "eslint": "^9.39.1",
-    "eslint-config-two-stroke": "^1.2.16",
-    "two-stroke": "^6.2.4",
+    "eslint": "^9.39.2",
+    "eslint-config-two-stroke": "^1.4.0",
+    "two-stroke": "^6.4.0",
     "typescript": "^5.9.3",
-    "vitest": "<4"
+    "vitest": "^4.0.18"
   },
   "resolutions": {
     "libpg-query": "17.1.1"
   },
   "dependencies": {
-    "@supabase/postgres-meta": "^0.95.0",
+    "@supabase/postgres-meta": "^0.95.2",
     "json-schema-to-typescript": "^15.0.4",
-    "prettier": "^3.6.2"
+    "prettier": "^3.8.1"
   }
 }
