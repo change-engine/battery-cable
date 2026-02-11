@@ -20,10 +20,14 @@
   "devDependencies": {
     "@types/eslint": "^9.6.1",
     "eslint": "^9.39.2",
-    "eslint-config-two-stroke": "^1.4.0",
-    "two-stroke": "^6.4.0",
+    "eslint-config-two-stroke": "^1.4.5",
+    "two-stroke": "^6.4.3",
     "typescript": "^5.9.3",
     "vitest": "^4.0.18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/change-engine/battery-cable"
   },
   "resolutions": {
     "libpg-query": "17.1.1"
