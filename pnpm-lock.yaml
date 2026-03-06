@@ -13,7 +13,7 @@ importers:
     dependencies:
       '@supabase/postgres-meta':
         specifier: ^0.96.0
-        version: 0.96.0(encoding@0.1.13)
+        version: 0.96.1(encoding@0.1.13)
       json-schema-to-typescript:
         specifier: ^15.0.4
         version: 15.0.4
@@ -29,16 +29,16 @@ importers:
         version: 9.39.3
       eslint-config-two-stroke:
         specifier: ^1.4.5
-        version: 1.4.5(@types/eslint@9.6.1)(eslint@9.39.3)(prettier@3.8.1)(typescript@5.9.3)(vitest@4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.3.3)(yaml@2.8.2))
+        version: 1.4.5(@types/eslint@9.6.1)(eslint@9.39.3)(prettier@3.8.1)(typescript@5.9.3)(vitest@4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.3.5)(yaml@2.8.2))
       two-stroke:
         specifier: ^6.4.3
-        version: 6.4.3(@sentry/cli@2.58.2(encoding@0.1.13))(@types/eslint@9.6.1)(@vitest/runner@4.0.18)(@vitest/snapshot@4.0.18)(eslint@9.39.3)(prettier@3.8.1)(typescript@5.9.3)(vitest@4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.3.3)(yaml@2.8.2))(wrangler@4.70.0(@cloudflare/workers-types@4.20260305.1))
+        version: 6.4.3(@sentry/cli@2.58.2(encoding@0.1.13))(@types/eslint@9.6.1)(@vitest/runner@4.0.18)(@vitest/snapshot@4.0.18)(eslint@9.39.3)(prettier@3.8.1)(typescript@5.9.3)(vitest@4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.3.5)(yaml@2.8.2))(wrangler@4.70.0(@cloudflare/workers-types@4.20260305.1))
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
       vitest:
         specifier: ^4.0.18
-        version: 4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.3.3)(yaml@2.8.2)
+        version: 4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.3.5)(yaml@2.8.2)
 
 packages:
 
@@ -1158,8 +1158,8 @@ packages:
       pg-native:
         optional: true
 
-  '@supabase/postgres-meta@0.96.0':
-    resolution: {integrity: sha512-5HnsbzEApy2ygTjqfG174BUWswaaDHM6tGrrshN70rInWa4tJvrqfj5fD0WgWglWX3QYcdpRzuNqq+K5MXx8fg==}
+  '@supabase/postgres-meta@0.96.1':
+    resolution: {integrity: sha512-t0dxwNyI/D9LauZ5ufHQt4aqkE7GroKwpeZAdJnRSNUyiVFBso1x/v+aI2d6j8fk9H8amIM5W+zVjECIcH8IwQ==}
     engines: {node: '>=20', npm: '>=9'}
 
   '@types/chai@5.2.3':
@@ -1188,6 +1188,9 @@ packages:
 
   '@types/node@25.3.3':
     resolution: {integrity: sha512-DpzbrH7wIcBaJibpKo9nnSQL0MTRdnWttGyE5haGwK86xgMOkFLp7vEyfQPGLOJh5wNYiJ3V9PmUMDhV9u8kkQ==}
+
+  '@types/node@25.3.5':
+    resolution: {integrity: sha512-oX8xrhvpiyRCQkG1MFchB09f+cXftgIXb3a7UUa4Y3wpmZPw5tyZGTLWhlESOLq1Rq6oDlc8npVU2/9xiCuXMA==}
 
   '@types/pg-pool@2.0.6':
     resolution: {integrity: sha512-TaAUE5rq2VQYxab5Ts7WZhKNmuN78Q6PiFonTDdpbx8a1H0M1vhy3rhiMjl+e2iHmogyMw7jZF4FrE6eJUy5HQ==}
@@ -3137,14 +3140,14 @@ snapshots:
     optionalDependencies:
       workerd: 1.20260301.1
 
-  '@cloudflare/vitest-pool-workers@0.12.19(@cloudflare/workers-types@4.20260305.1)(@vitest/runner@4.0.18)(@vitest/snapshot@4.0.18)(vitest@4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.3.3)(yaml@2.8.2))':
+  '@cloudflare/vitest-pool-workers@0.12.19(@cloudflare/workers-types@4.20260305.1)(@vitest/runner@4.0.18)(@vitest/snapshot@4.0.18)(vitest@4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.3.5)(yaml@2.8.2))':
     dependencies:
       '@vitest/runner': 4.0.18
       '@vitest/snapshot': 4.0.18
       cjs-module-lexer: 1.4.3
       esbuild: 0.27.3
       miniflare: 4.20260301.1
-      vitest: 4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.3.3)(yaml@2.8.2)
+      vitest: 4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.3.5)(yaml@2.8.2)
       wrangler: 4.70.0(@cloudflare/workers-types@4.20260305.1)
     transitivePeerDependencies:
       - '@cloudflare/workers-types'
@@ -3506,7 +3509,7 @@ snapshots:
       '@protobufjs/path': 1.1.2
       '@protobufjs/pool': 1.1.0
       '@protobufjs/utf8': 1.1.0
-      '@types/node': 25.3.3
+      '@types/node': 25.3.5
       long: 5.3.2
 
   '@mapbox/node-pre-gyp@1.0.11(encoding@0.1.13)':
@@ -4097,7 +4100,7 @@ snapshots:
     transitivePeerDependencies:
       - pg
 
-  '@supabase/postgres-meta@0.96.0(encoding@0.1.13)':
+  '@supabase/postgres-meta@0.96.1(encoding@0.1.13)':
     dependencies:
       '@fastify/cors': 9.0.1
       '@fastify/swagger': 8.15.0
@@ -4130,7 +4133,7 @@ snapshots:
 
   '@types/connect@3.4.38':
     dependencies:
-      '@types/node': 25.3.3
+      '@types/node': 25.3.5
 
   '@types/deep-eql@4.0.2': {}
 
@@ -4147,9 +4150,13 @@ snapshots:
 
   '@types/mysql@2.15.26':
     dependencies:
-      '@types/node': 25.3.3
+      '@types/node': 25.3.5
 
   '@types/node@25.3.3':
+    dependencies:
+      undici-types: 7.18.2
+
+  '@types/node@25.3.5':
     dependencies:
       undici-types: 7.18.2
 
@@ -4159,7 +4166,7 @@ snapshots:
 
   '@types/pg@8.6.1':
     dependencies:
-      '@types/node': 25.3.3
+      '@types/node': 25.3.5
       pg-protocol: 1.13.0
       pg-types: 2.2.0
 
@@ -4167,7 +4174,7 @@ snapshots:
 
   '@types/tedious@4.0.14':
     dependencies:
-      '@types/node': 25.3.3
+      '@types/node': 25.3.5
 
   '@typescript-eslint/eslint-plugin@8.56.1(@typescript-eslint/parser@8.56.1(eslint@9.39.3)(typescript@5.9.3))(eslint@9.39.3)(typescript@5.9.3)':
     dependencies:
@@ -4298,7 +4305,7 @@ snapshots:
       '@typescript-eslint/types': 8.56.1
       eslint-visitor-keys: 5.0.1
 
-  '@vitest/coverage-istanbul@4.0.18(vitest@4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.3.3)(yaml@2.8.2))':
+  '@vitest/coverage-istanbul@4.0.18(vitest@4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.3.5)(yaml@2.8.2))':
     dependencies:
       '@istanbuljs/schema': 0.1.3
       '@jridgewell/gen-mapping': 0.3.13
@@ -4310,7 +4317,7 @@ snapshots:
       magicast: 0.5.2
       obug: 2.1.1
       tinyrainbow: 3.0.3
-      vitest: 4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.3.3)(yaml@2.8.2)
+      vitest: 4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.3.5)(yaml@2.8.2)
     transitivePeerDependencies:
       - supports-color
 
@@ -4323,13 +4330,13 @@ snapshots:
       chai: 6.2.2
       tinyrainbow: 3.0.3
 
-  '@vitest/mocker@4.0.18(vite@7.3.1(@types/node@25.3.3)(yaml@2.8.2))':
+  '@vitest/mocker@4.0.18(vite@7.3.1(@types/node@25.3.5)(yaml@2.8.2))':
     dependencies:
       '@vitest/spy': 4.0.18
       estree-walker: 3.0.3
       magic-string: 0.30.21
     optionalDependencies:
-      vite: 7.3.1(@types/node@25.3.3)(yaml@2.8.2)
+      vite: 7.3.1(@types/node@25.3.5)(yaml@2.8.2)
 
   '@vitest/pretty-format@4.0.18':
     dependencies:
@@ -4625,7 +4632,7 @@ snapshots:
     dependencies:
       eslint: 9.39.3
 
-  eslint-config-two-stroke@1.4.5(@types/eslint@9.6.1)(eslint@9.39.3)(prettier@3.8.1)(typescript@5.9.3)(vitest@4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.3.3)(yaml@2.8.2)):
+  eslint-config-two-stroke@1.4.5(@types/eslint@9.6.1)(eslint@9.39.3)(prettier@3.8.1)(typescript@5.9.3)(vitest@4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.3.5)(yaml@2.8.2)):
     dependencies:
       '@eslint/compat': 2.0.2(eslint@9.39.3)
       '@eslint/js': 9.39.3
@@ -4636,7 +4643,7 @@ snapshots:
       eslint-config-typescript: 3.0.0(@typescript-eslint/eslint-plugin@8.56.1(@typescript-eslint/parser@8.56.1(eslint@9.39.3)(typescript@5.9.3))(eslint@9.39.3)(typescript@5.9.3))(@typescript-eslint/parser@8.56.1(eslint@9.39.3)(typescript@5.9.3))(eslint@9.39.3)(typescript@5.9.3)
       eslint-plugin-n: 17.24.0(eslint@9.39.3)(typescript@5.9.3)
       eslint-plugin-prettier: 5.5.5(@types/eslint@9.6.1)(eslint-config-prettier@10.1.8(eslint@9.39.3))(eslint@9.39.3)(prettier@3.8.1)
-      eslint-plugin-vitest: 0.5.4(@typescript-eslint/eslint-plugin@8.56.1(@typescript-eslint/parser@8.56.1(eslint@9.39.3)(typescript@5.9.3))(eslint@9.39.3)(typescript@5.9.3))(eslint@9.39.3)(typescript@5.9.3)(vitest@4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.3.3)(yaml@2.8.2))
+      eslint-plugin-vitest: 0.5.4(@typescript-eslint/eslint-plugin@8.56.1(@typescript-eslint/parser@8.56.1(eslint@9.39.3)(typescript@5.9.3))(eslint@9.39.3)(typescript@5.9.3))(eslint@9.39.3)(typescript@5.9.3)(vitest@4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.3.5)(yaml@2.8.2))
       prettier: 3.8.1
       typescript-eslint: 8.56.1(eslint@9.39.3)(typescript@5.9.3)
     transitivePeerDependencies:
@@ -4684,13 +4691,13 @@ snapshots:
       '@types/eslint': 9.6.1
       eslint-config-prettier: 10.1.8(eslint@9.39.3)
 
-  eslint-plugin-vitest@0.5.4(@typescript-eslint/eslint-plugin@8.56.1(@typescript-eslint/parser@8.56.1(eslint@9.39.3)(typescript@5.9.3))(eslint@9.39.3)(typescript@5.9.3))(eslint@9.39.3)(typescript@5.9.3)(vitest@4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.3.3)(yaml@2.8.2)):
+  eslint-plugin-vitest@0.5.4(@typescript-eslint/eslint-plugin@8.56.1(@typescript-eslint/parser@8.56.1(eslint@9.39.3)(typescript@5.9.3))(eslint@9.39.3)(typescript@5.9.3))(eslint@9.39.3)(typescript@5.9.3)(vitest@4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.3.5)(yaml@2.8.2)):
     dependencies:
       '@typescript-eslint/utils': 7.18.0(eslint@9.39.3)(typescript@5.9.3)
       eslint: 9.39.3
     optionalDependencies:
       '@typescript-eslint/eslint-plugin': 8.56.1(@typescript-eslint/parser@8.56.1(eslint@9.39.3)(typescript@5.9.3))(eslint@9.39.3)(typescript@5.9.3)
-      vitest: 4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.3.3)(yaml@2.8.2)
+      vitest: 4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.3.5)(yaml@2.8.2)
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -5859,18 +5866,18 @@ snapshots:
 
   tslib@2.8.1: {}
 
-  two-stroke@6.4.3(@sentry/cli@2.58.2(encoding@0.1.13))(@types/eslint@9.6.1)(@vitest/runner@4.0.18)(@vitest/snapshot@4.0.18)(eslint@9.39.3)(prettier@3.8.1)(typescript@5.9.3)(vitest@4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.3.3)(yaml@2.8.2))(wrangler@4.70.0(@cloudflare/workers-types@4.20260305.1)):
+  two-stroke@6.4.3(@sentry/cli@2.58.2(encoding@0.1.13))(@types/eslint@9.6.1)(@vitest/runner@4.0.18)(@vitest/snapshot@4.0.18)(eslint@9.39.3)(prettier@3.8.1)(typescript@5.9.3)(vitest@4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.3.5)(yaml@2.8.2))(wrangler@4.70.0(@cloudflare/workers-types@4.20260305.1)):
     dependencies:
-      '@cloudflare/vitest-pool-workers': 0.12.19(@cloudflare/workers-types@4.20260305.1)(@vitest/runner@4.0.18)(@vitest/snapshot@4.0.18)(vitest@4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.3.3)(yaml@2.8.2))
+      '@cloudflare/vitest-pool-workers': 0.12.19(@cloudflare/workers-types@4.20260305.1)(@vitest/runner@4.0.18)(@vitest/snapshot@4.0.18)(vitest@4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.3.5)(yaml@2.8.2))
       '@cloudflare/workers-types': 4.20260305.1
       '@sentry/cli': 2.58.2(encoding@0.1.13)
       '@types/node': 25.3.3
       '@typescript-eslint/eslint-plugin': 8.56.1(@typescript-eslint/parser@8.56.1(eslint@9.39.3)(typescript@5.9.3))(eslint@9.39.3)(typescript@5.9.3)
       '@typescript-eslint/parser': 8.56.1(eslint@9.39.3)(typescript@5.9.3)
-      '@vitest/coverage-istanbul': 4.0.18(vitest@4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.3.3)(yaml@2.8.2))
+      '@vitest/coverage-istanbul': 4.0.18(vitest@4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.3.5)(yaml@2.8.2))
       eslint: 9.39.3
       eslint-config-prettier: 10.1.8(eslint@9.39.3)
-      eslint-config-two-stroke: 1.4.5(@types/eslint@9.6.1)(eslint@9.39.3)(prettier@3.8.1)(typescript@5.9.3)(vitest@4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.3.3)(yaml@2.8.2))
+      eslint-config-two-stroke: 1.4.5(@types/eslint@9.6.1)(eslint@9.39.3)(prettier@3.8.1)(typescript@5.9.3)(vitest@4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.3.5)(yaml@2.8.2))
       eslint-config-typescript: 3.0.0(@typescript-eslint/eslint-plugin@8.56.1(@typescript-eslint/parser@8.56.1(eslint@9.39.3)(typescript@5.9.3))(eslint@9.39.3)(typescript@5.9.3))(@typescript-eslint/parser@8.56.1(eslint@9.39.3)(typescript@5.9.3))(eslint@9.39.3)(typescript@5.9.3)
       jose: 6.2.0
       jwk-subtle: 1.1.5
@@ -5882,7 +5889,7 @@ snapshots:
       prettier: 3.8.1
       toucan-js: 4.1.1
       typescript: 5.9.3
-      vitest: 4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.3.3)(yaml@2.8.2)
+      vitest: 4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.3.5)(yaml@2.8.2)
       wrangler: 4.70.0(@cloudflare/workers-types@4.20260305.1)
       zod: 4.3.6
     transitivePeerDependencies:
@@ -5942,7 +5949,7 @@ snapshots:
 
   util-deprecate@1.0.2: {}
 
-  vite@7.3.1(@types/node@25.3.3)(yaml@2.8.2):
+  vite@7.3.1(@types/node@25.3.5)(yaml@2.8.2):
     dependencies:
       esbuild: 0.27.3
       fdir: 6.5.0(picomatch@4.0.3)
@@ -5951,14 +5958,14 @@ snapshots:
       rollup: 4.59.0
       tinyglobby: 0.2.15
     optionalDependencies:
-      '@types/node': 25.3.3
+      '@types/node': 25.3.5
       fsevents: 2.3.3
       yaml: 2.8.2
 
-  vitest@4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.3.3)(yaml@2.8.2):
+  vitest@4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.3.5)(yaml@2.8.2):
     dependencies:
       '@vitest/expect': 4.0.18
-      '@vitest/mocker': 4.0.18(vite@7.3.1(@types/node@25.3.3)(yaml@2.8.2))
+      '@vitest/mocker': 4.0.18(vite@7.3.1(@types/node@25.3.5)(yaml@2.8.2))
       '@vitest/pretty-format': 4.0.18
       '@vitest/runner': 4.0.18
       '@vitest/snapshot': 4.0.18
@@ -5975,11 +5982,11 @@ snapshots:
       tinyexec: 1.0.2
       tinyglobby: 0.2.15
       tinyrainbow: 3.0.3
-      vite: 7.3.1(@types/node@25.3.3)(yaml@2.8.2)
+      vite: 7.3.1(@types/node@25.3.5)(yaml@2.8.2)
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@opentelemetry/api': 1.9.0
-      '@types/node': 25.3.3
+      '@types/node': 25.3.5
     transitivePeerDependencies:
       - jiti
       - less
