@@ -1,7 +1,10 @@
-#minimumReleaseAge: 4320
+minimumReleaseAge: 4320
 minimumReleaseAgeExclude:
   - "two-stroke"
   - "eslint-config-two-stroke"
 trustPolicy: no-downgrade
+trustPolicyExclude:
+  - "semver@6.3.1"
+  - "pino@9.14.0"
 ignoreScripts: true
 blockExoticSubdeps: true
