@@ -21,7 +21,7 @@
     "@types/eslint": "^9.6.1",
     "eslint": "^10.0.3",
     "eslint-config-two-stroke": "^1.4.6",
-    "two-stroke": "^6.5.0",
+    "two-stroke": "^7.1.0",
     "typescript": "^5.9.3",
     "vitest": "^4.1.0"
   },
