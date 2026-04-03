@@ -13,7 +13,7 @@ importers:
     dependencies:
       '@supabase/postgres-meta':
         specifier: ^0.96.1
-        version: 0.96.1(encoding@0.1.13)
+        version: 0.96.2(encoding@0.1.13)
       json-schema-to-typescript:
         specifier: ^15.0.4
         version: 15.0.4
@@ -1272,8 +1272,8 @@ packages:
       pg-native:
         optional: true
 
-  '@supabase/postgres-meta@0.96.1':
-    resolution: {integrity: sha512-t0dxwNyI/D9LauZ5ufHQt4aqkE7GroKwpeZAdJnRSNUyiVFBso1x/v+aI2d6j8fk9H8amIM5W+zVjECIcH8IwQ==}
+  '@supabase/postgres-meta@0.96.2':
+    resolution: {integrity: sha512-ZDsRejKkXdsfXilMekg+N97yQSjLUYLVPVSCnpL/ZlZpmfy8B7NZ0fTEsuC2yZ5kYM5qKDE+K2f+8v8+ZdMdsA==}
     engines: {node: '>=20', npm: '>=9'}
 
   '@types/chai@5.2.3':
@@ -2128,6 +2128,10 @@ packages:
 
   minimatch@10.2.4:
     resolution: {integrity: sha512-oRjTw/97aTBN0RHbYCdtF1MQfvusSIBQM0IZEgzl6426+8jSC0nF1a/GmnVLpfB9yyr6g6FTqWqiZVbxrtaCIg==}
+    engines: {node: 18 || 20 || >=22}
+
+  minimatch@10.2.5:
+    resolution: {integrity: sha512-MULkVLfKGYDFYejP07QOurDLLQpcjk7Fw+7jXS2R2czRQzR56yHRveU5NDJEOviH+hETZKSkIk5c+T23GjFUMg==}
     engines: {node: 18 || 20 || >=22}
 
   minimatch@3.1.5:
@@ -4076,7 +4080,7 @@ snapshots:
     transitivePeerDependencies:
       - pg
 
-  '@supabase/postgres-meta@0.96.1(encoding@0.1.13)':
+  '@supabase/postgres-meta@0.96.2(encoding@0.1.13)':
     dependencies:
       '@fastify/cors': 9.0.1
       '@fastify/swagger': 8.15.0
@@ -4219,7 +4223,7 @@ snapshots:
       '@typescript-eslint/types': 8.57.2
       '@typescript-eslint/visitor-keys': 8.57.2
       debug: 4.4.3(supports-color@10.2.2)
-      minimatch: 10.2.4
+      minimatch: 10.2.5
       semver: 7.7.4
       tinyglobby: 0.2.15
       ts-api-utils: 2.5.0(typescript@6.0.2)
@@ -5068,6 +5072,10 @@ snapshots:
       - utf-8-validate
 
   minimatch@10.2.4:
+    dependencies:
+      brace-expansion: 5.0.5
+
+  minimatch@10.2.5:
     dependencies:
       brace-expansion: 5.0.5
 
