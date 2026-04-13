@@ -19,7 +19,7 @@ importers:
         version: 15.0.4
       prettier:
         specifier: ^3.8.1
-        version: 3.8.1
+        version: 3.8.2
     devDependencies:
       '@types/eslint':
         specifier: ^9.6.1
@@ -29,10 +29,10 @@ importers:
         version: 10.2.0
       eslint-config-two-stroke:
         specifier: ^1.5.2
-        version: 1.5.2(@types/eslint@9.6.1)(eslint@10.2.0)(prettier@3.8.1)(typescript@6.0.2)
+        version: 1.5.2(@types/eslint@9.6.1)(eslint@10.2.0)(prettier@3.8.2)(typescript@6.0.2)
       two-stroke:
         specifier: ^7.1.0
-        version: 7.3.0(@sentry/cli@2.58.2(encoding@0.1.13))(@types/eslint@9.6.1)(eslint@10.2.0)(prettier@3.8.1)(typescript@6.0.2)(vitest@4.1.2(@opentelemetry/api@1.9.1)(@types/node@25.5.0)(msw@2.12.14(@types/node@25.5.0)(typescript@6.0.2))(vite@7.3.1(@types/node@25.5.0)(yaml@2.8.3)))(wrangler@4.78.0)
+        version: 7.3.0(@sentry/cli@2.58.2(encoding@0.1.13))(@types/eslint@9.6.1)(eslint@10.2.0)(prettier@3.8.2)(typescript@6.0.2)(vitest@4.1.2(@opentelemetry/api@1.9.1)(@types/node@25.5.0)(msw@2.12.14(@types/node@25.5.0)(typescript@6.0.2))(vite@7.3.1(@types/node@25.5.0)(yaml@2.8.3)))(wrangler@4.78.0)
       typescript:
         specifier: ^6.0.2
         version: 6.0.2
@@ -2410,8 +2410,8 @@ packages:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==}
     engines: {node: '>=4'}
 
-  postcss@8.5.8:
-    resolution: {integrity: sha512-OW/rX8O/jXnm82Ey1k44pObPtdblfiuWnrd8X7GJ7emImCOstunGbXUpp7HdBrFQX6rJzn3sPT397Wp5aCwCHg==}
+  postcss@8.5.9:
+    resolution: {integrity: sha512-7a70Nsot+EMX9fFU3064K/kdHWZqGVY+BADLyXc8Dfv+mTLLVl6JzJpPaCZ2kQL9gIJvKXSLMHhqdRRjwQeFtw==}
     engines: {node: ^10 || ^12 || >=14}
 
   postgres-array@2.0.0:
@@ -2448,8 +2448,8 @@ packages:
     peerDependencies:
       prettier: ^3.0.3
 
-  prettier@3.8.1:
-    resolution: {integrity: sha512-UOnG6LftzbdaHZcKoPFtOcCKztrQ57WkHDeRD9t/PTQtmT0NHSeWWepj6pS0z/N7+08BHFDQVUrfmfMRcZwbMg==}
+  prettier@3.8.2:
+    resolution: {integrity: sha512-8c3mgTe0ASwWAJK+78dpviD+A8EqhndQPUBpNUIPt6+xWlIigCwfN01lWr9MAede4uqXGTEKeQWTvzb3vjia0Q==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -2715,6 +2715,10 @@ packages:
 
   tinyglobby@0.2.15:
     resolution: {integrity: sha512-j2Zq4NyQYG5XMST4cbs02Ak8iJUdxRM0XI5QyxXuZOzKOINmWurp3smXu3y5wDcJrptwpSjgXHzIQxR0omXljQ==}
+    engines: {node: '>=12.0.0'}
+
+  tinyglobby@0.2.16:
+    resolution: {integrity: sha512-pn99VhoACYR8nFHhxqix+uvsbXineAasWm5ojXoN8xEwK5Kd3/TrhNn1wByuD52UxWRLy8pu+kRMniEi6Eq9Zg==}
     engines: {node: '>=12.0.0'}
 
   tinyrainbow@3.1.0:
@@ -4095,8 +4099,8 @@ snapshots:
       pgsql-parser: 17.9.14(encoding@0.1.13)
       pino: 9.14.0
       postgres-array: 3.0.4
-      prettier: 3.8.1
-      prettier-plugin-sql: 0.17.1(prettier@3.8.1)
+      prettier: 3.8.2
+      prettier-plugin-sql: 0.17.1(prettier@3.8.2)
     transitivePeerDependencies:
       - encoding
       - pg-native
@@ -4563,7 +4567,7 @@ snapshots:
     dependencies:
       eslint: 10.2.0
 
-  eslint-config-two-stroke@1.5.2(@types/eslint@9.6.1)(eslint@10.2.0)(prettier@3.8.1)(typescript@6.0.2):
+  eslint-config-two-stroke@1.5.2(@types/eslint@9.6.1)(eslint@10.2.0)(prettier@3.8.2)(typescript@6.0.2):
     dependencies:
       '@eslint/compat': 2.0.3(eslint@10.2.0)
       '@eslint/js': 10.0.1(eslint@10.2.0)
@@ -4573,8 +4577,8 @@ snapshots:
       eslint-config-prettier: 10.1.8(eslint@10.2.0)
       eslint-config-typescript: 3.0.0(@typescript-eslint/eslint-plugin@8.57.2(@typescript-eslint/parser@8.57.2(eslint@10.2.0)(typescript@6.0.2))(eslint@10.2.0)(typescript@6.0.2))(@typescript-eslint/parser@8.57.2(eslint@10.2.0)(typescript@6.0.2))(eslint@10.2.0)(typescript@6.0.2)
       eslint-plugin-n: 17.24.0(eslint@10.2.0)(typescript@6.0.2)
-      eslint-plugin-prettier: 5.5.5(@types/eslint@9.6.1)(eslint-config-prettier@10.1.8(eslint@10.2.0))(eslint@10.2.0)(prettier@3.8.1)
-      prettier: 3.8.1
+      eslint-plugin-prettier: 5.5.5(@types/eslint@9.6.1)(eslint-config-prettier@10.1.8(eslint@10.2.0))(eslint@10.2.0)(prettier@3.8.2)
+      prettier: 3.8.2
       typescript-eslint: 8.57.2(eslint@10.2.0)(typescript@6.0.2)
     transitivePeerDependencies:
       - '@types/eslint'
@@ -4610,10 +4614,10 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  eslint-plugin-prettier@5.5.5(@types/eslint@9.6.1)(eslint-config-prettier@10.1.8(eslint@10.2.0))(eslint@10.2.0)(prettier@3.8.1):
+  eslint-plugin-prettier@5.5.5(@types/eslint@9.6.1)(eslint-config-prettier@10.1.8(eslint@10.2.0))(eslint@10.2.0)(prettier@3.8.2):
     dependencies:
       eslint: 10.2.0
-      prettier: 3.8.1
+      prettier: 3.8.2
       prettier-linter-helpers: 1.0.1
       synckit: 0.11.12
     optionalDependencies:
@@ -4976,7 +4980,7 @@ snapshots:
       js-yaml: 4.1.1
       lodash: 4.17.23
       minimist: 1.2.8
-      prettier: 3.8.1
+      prettier: 3.8.2
       tinyglobby: 0.2.15
 
   json-schema-traverse@0.4.1: {}
@@ -5367,7 +5371,7 @@ snapshots:
 
   pluralize@8.0.0: {}
 
-  postcss@8.5.8:
+  postcss@8.5.9:
     dependencies:
       nanoid: 3.3.11
       picocolors: 1.1.1
@@ -5391,15 +5395,15 @@ snapshots:
     dependencies:
       fast-diff: 1.3.0
 
-  prettier-plugin-sql@0.17.1(prettier@3.8.1):
+  prettier-plugin-sql@0.17.1(prettier@3.8.2):
     dependencies:
       jsox: 1.2.125
       node-sql-parser: 4.18.0
-      prettier: 3.8.1
+      prettier: 3.8.2
       sql-formatter: 14.0.0
       tslib: 2.8.1
 
-  prettier@3.8.1: {}
+  prettier@3.8.2: {}
 
   proc-log@4.2.0: {}
 
@@ -5680,6 +5684,11 @@ snapshots:
       fdir: 6.5.0(picomatch@4.0.4)
       picomatch: 4.0.4
 
+  tinyglobby@0.2.16:
+    dependencies:
+      fdir: 6.5.0(picomatch@4.0.4)
+      picomatch: 4.0.4
+
   tinyrainbow@3.1.0: {}
 
   tldts-core@7.0.27: {}
@@ -5713,7 +5722,7 @@ snapshots:
 
   tslib@2.8.1: {}
 
-  two-stroke@7.3.0(@sentry/cli@2.58.2(encoding@0.1.13))(@types/eslint@9.6.1)(eslint@10.2.0)(prettier@3.8.1)(typescript@6.0.2)(vitest@4.1.2(@opentelemetry/api@1.9.1)(@types/node@25.5.0)(msw@2.12.14(@types/node@25.5.0)(typescript@6.0.2))(vite@7.3.1(@types/node@25.5.0)(yaml@2.8.3)))(wrangler@4.78.0):
+  two-stroke@7.3.0(@sentry/cli@2.58.2(encoding@0.1.13))(@types/eslint@9.6.1)(eslint@10.2.0)(prettier@3.8.2)(typescript@6.0.2)(vitest@4.1.2(@opentelemetry/api@1.9.1)(@types/node@25.5.0)(msw@2.12.14(@types/node@25.5.0)(typescript@6.0.2))(vite@7.3.1(@types/node@25.5.0)(yaml@2.8.3)))(wrangler@4.78.0):
     dependencies:
       '@cloudflare/vitest-pool-workers': 0.13.5(@vitest/runner@4.1.2)(@vitest/snapshot@4.1.2)(vitest@4.1.2(@opentelemetry/api@1.9.1)(@types/node@25.5.0)(msw@2.12.14(@types/node@25.5.0)(typescript@6.0.2))(vite@7.3.1(@types/node@25.5.0)(yaml@2.8.3)))
       '@sentry/cli': 2.58.2(encoding@0.1.13)
@@ -5724,7 +5733,7 @@ snapshots:
       '@vitest/snapshot': 4.1.2
       eslint: 10.2.0
       eslint-config-prettier: 10.1.8(eslint@10.2.0)
-      eslint-config-two-stroke: 1.5.2(@types/eslint@9.6.1)(eslint@10.2.0)(prettier@3.8.1)(typescript@6.0.2)
+      eslint-config-two-stroke: 1.5.2(@types/eslint@9.6.1)(eslint@10.2.0)(prettier@3.8.2)(typescript@6.0.2)
       eslint-config-typescript: 3.0.0(@typescript-eslint/eslint-plugin@8.57.2(@typescript-eslint/parser@8.57.2(eslint@10.2.0)(typescript@6.0.2))(eslint@10.2.0)(typescript@6.0.2))(@typescript-eslint/parser@8.57.2(eslint@10.2.0)(typescript@6.0.2))(eslint@10.2.0)(typescript@6.0.2)
       jose: 6.2.2
       jwk-subtle: 1.1.5
@@ -5734,7 +5743,7 @@ snapshots:
       openapi-fetch: 0.17.0
       openapi-typescript: 7.13.0(typescript@6.0.2)
       pbkdf-subtle: 1.1.5
-      prettier: 3.8.1
+      prettier: 3.8.2
       toucan-js: 4.1.1
       typescript: 6.0.2
       vitest: 4.1.2(@opentelemetry/api@1.9.1)(@types/node@25.5.0)(msw@2.12.14(@types/node@25.5.0)(typescript@6.0.2))(vite@7.3.1(@types/node@25.5.0)(yaml@2.8.3))
@@ -5801,9 +5810,9 @@ snapshots:
       esbuild: 0.27.7
       fdir: 6.5.0(picomatch@4.0.4)
       picomatch: 4.0.4
-      postcss: 8.5.8
+      postcss: 8.5.9
       rollup: 4.60.1
-      tinyglobby: 0.2.15
+      tinyglobby: 0.2.16
     optionalDependencies:
       '@types/node': 25.5.0
       fsevents: 2.3.3
