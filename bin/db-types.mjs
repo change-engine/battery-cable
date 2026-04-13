@@ -10,12 +10,9 @@ const SCHEAMS = process.argv[2].split(",");
 const pgTypeToTsType = (pgType, types) => {
   if (!pgType) return "unknown";
   if (pgType === "void") return "undefined";
-  if (pgType[0] === "_")
-    return `${pgTypeToTsType(pgType.substring(1), types)}[]`;
+  if (pgType[0] === "_") return `${pgTypeToTsType(pgType.substring(1), types)}[]`;
 
-  const enumType = types.find(
-    (type) => type.name === pgType && type.enums.length > 0,
-  );
+  const enumType = types.find((type) => type.name === pgType && type.enums.length > 0);
   if (enumType) {
     return enumType.enums.map((variant) => JSON.stringify(variant)).join(" | ");
   }
@@ -137,31 +134,23 @@ const ok = async (r) => {
 };
 
 const pgMeta = new PostgresMeta({
-  connectionString:
-    process.env.DATABASE_URL ?? "postgres://postgres:postgres@0.0.0.0:54322",
+  connectionString: process.env.DATABASE_URL ?? "postgres://postgres:postgres@0.0.0.0:54322",
 });
-const [
-  schemas,
-  tables,
-  views,
-  materializedViews,
-  functions,
-  types,
-  relationships,
-] = await Promise.all([
-  ok(pgMeta.schemas.list()),
-  ok(pgMeta.tables.list()),
-  ok(pgMeta.views.list()),
-  ok(pgMeta.materializedViews.list({ includeColumns: true })),
-  ok(pgMeta.functions.list()),
-  ok(
-    pgMeta.types.list({
-      includeArrayTypes: true,
-      includeSystemSchemas: true,
-    }),
-  ),
-  ok(pgMeta.relationships.list()),
-]);
+const [schemas, tables, views, materializedViews, functions, types, relationships] =
+  await Promise.all([
+    ok(pgMeta.schemas.list()),
+    ok(pgMeta.tables.list()),
+    ok(pgMeta.views.list()),
+    ok(pgMeta.materializedViews.list({ includeColumns: true })),
+    ok(pgMeta.functions.list()),
+    ok(
+      pgMeta.types.list({
+        includeArrayTypes: true,
+        includeSystemSchemas: true,
+      }),
+    ),
+    ok(pgMeta.relationships.list()),
+  ]);
 
 const functionComments = await ok(
   pgMeta.query(`
@@ -247,10 +236,7 @@ async function generateSchemaFunctions(schemaFunctions) {
         }
 
         // After exiting braces, capture trailing tokens (e.g. [] | null)
-        while (
-          valueEnd < rawBlock.length &&
-          !["\n", ","].includes(rawBlock[valueEnd])
-        ) {
+        while (valueEnd < rawBlock.length && !["\n", ","].includes(rawBlock[valueEnd])) {
           valueEnd++;
         }
       } else {
@@ -369,18 +355,13 @@ async function generateSchemaFunctions(schemaFunctions) {
               if (inArgs.length === 0) {
                 ArgsBlock = "Record<PropertyKey, never>;";
               } else {
-                const argsNameAndType = inArgs.map(
-                  ({ name, type_id, has_default }) => {
-                    return {
-                      name,
-                      type: pgTypeToTsType(
-                        types.find(({ id }) => id === type_id)?.name,
-                        types,
-                      ),
-                      has_default,
-                    };
-                  },
-                );
+                const argsNameAndType = inArgs.map(({ name, type_id, has_default }) => {
+                  return {
+                    name,
+                    type: pgTypeToTsType(types.find(({ id }) => id === type_id)?.name, types),
+                    has_default,
+                  };
+                });
 
                 const sortedArgsNameAndType = argsNameAndType
                   .slice()
@@ -388,10 +369,7 @@ async function generateSchemaFunctions(schemaFunctions) {
 
                 ArgsBlock = `{
 ${sortedArgsNameAndType
-  .map(
-    ({ name, type, has_default }) =>
-      `          ${name}${has_default ? "?" : ""}: ${type};`,
-  )
+  .map(({ name, type, has_default }) => `          ${name}${has_default ? "?" : ""}: ${type};`)
   .join("\n")}
         };`;
               }
@@ -414,9 +392,7 @@ ${sortedArgsNameAndType
                   const cols = sortedTableArgs.map(({ name, type_id }) => {
                     if (typeOverrides[name] !== undefined) {
                       const type = typeOverrides[name];
-                      return `          ${name}: ${
-                        nonNull.has(name) ? type : `${type} | null`
-                      };`;
+                      return `          ${name}: ${nonNull.has(name) ? type : `${type} | null`};`;
                     }
 
                     const base = pgTypeToTsType(
@@ -424,9 +400,7 @@ ${sortedArgsNameAndType
                       types,
                     );
                     const cleaned = replaceLast(base, " | null", "");
-                    const finalType = nonNull.has(name)
-                      ? cleaned
-                      : `${cleaned} | null`;
+                    const finalType = nonNull.has(name) ? cleaned : `${cleaned} | null`;
 
                     return `          ${name}: ${finalType};`;
                   });
@@ -460,9 +434,7 @@ ${cols.join("\n")}
 
                         const base = await columnToTsType(column, types);
                         const cleaned = replaceLast(base, " | null", "");
-                        const finalType = nonNull.has(name)
-                          ? cleaned
-                          : `${cleaned} | null`;
+                        const finalType = nonNull.has(name) ? cleaned : `${cleaned} | null`;
 
                         return `          ${name}: ${finalType};`;
                       }),
@@ -535,9 +507,7 @@ ${(
           .slice()
           .sort(({ name: a }, { name: b }) => a.localeCompare(b));
         const schemaCompositeTypes = types
-          .filter(
-            (type) => type.schema === schema.name && type.attributes.length > 0,
-          )
+          .filter((type) => type.schema === schema.name && type.attributes.length > 0)
           .slice()
           .sort(({ name: a }, { name: b }) => a.localeCompare(b));
         return `  ${schema.name}: {
@@ -555,19 +525,13 @@ ${[
     table.columns
       .slice()
       .sort(({ name: a }, { name: b }) => a.localeCompare(b))
-      .map(
-        async (column) =>
-          `          ${column.name}: ${await columnToTsType(column, types)};`,
-      ),
+      .map(async (column) => `          ${column.name}: ${await columnToTsType(column, types)};`),
   )),
   ...schemaFunctions
     .filter((fn) => fn.argument_types === table.name)
     .slice()
     .sort((a, b) => a.name.localeCompare(b.name))
-    .map(
-      (fn) =>
-        `        ${fn.name}: ${pgTypeToTsType(fn.return_type, types)} | null`,
-    ),
+    .map((fn) => `        ${fn.name}: ${pgTypeToTsType(fn.return_type, types)} | null`),
 ].join("\n")}
         };
         Insert: {
@@ -578,19 +542,9 @@ ${(
       .sort(({ name: a }, { name: b }) => a.localeCompare(b))
       .filter((column) => !column.comment?.startsWith("READONLY:"))
       .map(async (column) =>
-        column.is_nullable ||
-        column.is_identity ||
-        column.default_value !== null
-          ? `          ${column.name}?: ${await columnToTsType(
-              column,
-              types,
-              false,
-            )};`
-          : `          ${column.name}: ${await columnToTsType(
-              column,
-              types,
-              false,
-            )};`,
+        column.is_nullable || column.is_identity || column.default_value !== null
+          ? `          ${column.name}?: ${await columnToTsType(column, types, false)};`
+          : `          ${column.name}: ${await columnToTsType(column, types, false)};`,
       ),
   )
 ).join("\n")}
@@ -604,11 +558,7 @@ ${(
       .filter((column) => !column.comment?.startsWith("READONLY:"))
       .map(
         async (column) =>
-          `          ${column.name}?: ${await columnToTsType(
-            column,
-            types,
-            false,
-          )};`,
+          `          ${column.name}?: ${await columnToTsType(column, types, false)};`,
       ),
   )
 ).join("\n")}
@@ -618,11 +568,7 @@ ${relationships
   .filter((rel) => table.schema === rel.schema && table.name === rel.relation)
   .slice()
   .sort((a, b) =>
-    a.foreign_key_name < b.foreign_key_name
-      ? -1
-      : a.foreign_key_name > b.foreign_key_name
-        ? 1
-        : 0,
+    a.foreign_key_name < b.foreign_key_name ? -1 : a.foreign_key_name > b.foreign_key_name ? 1 : 0,
   )
   .map(
     (rel) => `          {
@@ -646,11 +592,7 @@ ${
   schemaViews.length === 0
     ? "      [_ in never]: never;"
     : (
-        await Promise.all(
-          schemaViews.map((view) =>
-            generateViewTypes(view, types, relationships),
-          ),
-        )
+        await Promise.all(schemaViews.map((view) => generateViewTypes(view, types, relationships)))
       ).join("\n")
 }
     };
@@ -693,9 +635,7 @@ ${(
       .sort(({ name: a }, { name: b }) => a.localeCompare(b))
       .map((schema) => {
         const schemaCompositeTypes = types
-          .filter(
-            (type) => type.schema === schema.name && type.attributes.length > 0,
-          )
+          .filter((type) => type.schema === schema.name && type.attributes.length > 0)
           .slice()
           .sort(({ name: a }, { name: b }) => a.localeCompare(b));
         return `  ${schema.name}: {

@@ -19,11 +19,22 @@
   "version": "0.8.4",
   "devDependencies": {
     "@types/eslint": "^9.6.1",
-    "eslint": "^10.1.0",
+    "eslint": "^10.2.0",
     "eslint-config-two-stroke": "^1.5.2",
-    "two-stroke": "^7.1.0",
+    "two-stroke": "^7.5.0",
     "typescript": "^6.0.2",
-    "vitest": "^4.1.2"
+    "vitest": "^4.1.4"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "overrides": [
+      {
+        "files": "./*.yaml",
+        "options": {
+          "requirePragma": true
+        }
+      }
+    ]
   },
   "repository": {
     "type": "git",
@@ -33,8 +44,8 @@
     "libpg-query": "17.1.1"
   },
   "dependencies": {
-    "@supabase/postgres-meta": "^0.96.1",
+    "@supabase/postgres-meta": "^0.96.4",
     "json-schema-to-typescript": "^15.0.4",
-    "prettier": "^3.8.1"
+    "prettier": "^3.8.2"
   }
 }
