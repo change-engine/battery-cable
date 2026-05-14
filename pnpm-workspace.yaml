@@ -1,6 +1,8 @@
 minimumReleaseAge: 4320
 minimumReleaseAgeExclude:
   - "two-stroke"
+  - "jwk-subtle"
+  - "pbkdf-subtle"
   - "eslint-config-two-stroke"
 trustPolicy: no-downgrade
 trustPolicyExclude:
