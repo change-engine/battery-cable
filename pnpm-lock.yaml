@@ -32,7 +32,7 @@ importers:
         version: 1.5.3(@types/eslint@9.6.1)(eslint@10.4.1)(prettier@3.8.3)(ts-declaration-location@1.0.7(typescript@6.0.3))(typescript@6.0.3)
       two-stroke:
         specifier: ^7.6.1
-        version: 7.6.2(@sentry/cli@2.58.2(encoding@0.1.13))(@types/eslint@9.6.1)(eslint@10.4.1)(prettier@3.8.3)(ts-declaration-location@1.0.7(typescript@6.0.3))(typescript@6.0.3)(vitest@4.1.8(@opentelemetry/api@1.9.1)(@types/node@25.9.2)(msw@2.14.6(@types/node@25.9.2)(typescript@6.0.3))(vite@7.3.1(@types/node@25.9.2)(yaml@2.9.0)))(wrangler@4.98.0)
+        version: 7.6.5(@sentry/cli@2.58.2(encoding@0.1.13))(@types/eslint@9.6.1)(eslint@10.4.1)(prettier@3.8.3)(ts-declaration-location@1.0.7(typescript@6.0.3))(typescript@6.0.3)(vitest@4.1.8(@opentelemetry/api@1.9.1)(@types/node@25.9.2)(msw@2.14.6(@types/node@25.9.2)(typescript@6.0.3))(vite@7.3.1(@types/node@25.9.2)(yaml@2.9.0)))(wrangler@4.98.0)
       typescript:
         specifier: ^6.0.2
         version: 6.0.3
@@ -2863,8 +2863,8 @@ packages:
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
 
-  two-stroke@7.6.2:
-    resolution: {integrity: sha512-5bRoATeZ/kKeXBt0aBYlJBrN+USQb4Es8+wTeYx6KsK7c/MFTvMFo1sMGbwQt/CjOTy3ua6xOfpuzZTj+m05fQ==}
+  two-stroke@7.6.5:
+    resolution: {integrity: sha512-uk1wDsOMIKz86oPtEZIQfxOSC83sX8L1bh2vFWed49JcQ8fKF8/VahVG86KfLja9jP+cx4I4x+bR+3U5UW9j8Q==}
     engines: {node: ^24.9.0}
     hasBin: true
     peerDependencies:
@@ -5957,7 +5957,7 @@ snapshots:
 
   tslib@2.8.1: {}
 
-  two-stroke@7.6.2(@sentry/cli@2.58.2(encoding@0.1.13))(@types/eslint@9.6.1)(eslint@10.4.1)(prettier@3.8.3)(ts-declaration-location@1.0.7(typescript@6.0.3))(typescript@6.0.3)(vitest@4.1.8(@opentelemetry/api@1.9.1)(@types/node@25.9.2)(msw@2.14.6(@types/node@25.9.2)(typescript@6.0.3))(vite@7.3.1(@types/node@25.9.2)(yaml@2.9.0)))(wrangler@4.98.0):
+  two-stroke@7.6.5(@sentry/cli@2.58.2(encoding@0.1.13))(@types/eslint@9.6.1)(eslint@10.4.1)(prettier@3.8.3)(ts-declaration-location@1.0.7(typescript@6.0.3))(typescript@6.0.3)(vitest@4.1.8(@opentelemetry/api@1.9.1)(@types/node@25.9.2)(msw@2.14.6(@types/node@25.9.2)(typescript@6.0.3))(vite@7.3.1(@types/node@25.9.2)(yaml@2.9.0)))(wrangler@4.98.0):
     dependencies:
       '@cloudflare/vitest-pool-workers': 0.16.13(@vitest/runner@4.1.8)(@vitest/snapshot@4.1.8)(vitest@4.1.8(@opentelemetry/api@1.9.1)(@types/node@25.9.2)(msw@2.14.6(@types/node@25.9.2)(typescript@6.0.3))(vite@7.3.1(@types/node@25.9.2)(yaml@2.9.0)))
       '@sentry/cli': 2.58.2(encoding@0.1.13)
