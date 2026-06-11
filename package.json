@@ -20,8 +20,8 @@
   "devDependencies": {
     "@types/eslint": "^9.6.1",
     "eslint": "^10.2.0",
-    "eslint-config-two-stroke": "^1.5.3",
-    "two-stroke": "^7.6.1",
+    "eslint-config-two-stroke": "^1.5.4",
+    "two-stroke": "^7.6.6",
     "typescript": "^6.0.2",
     "vitest": "^4.1.4"
   },
