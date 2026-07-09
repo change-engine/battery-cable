@@ -29,7 +29,7 @@ importers:
         version: 10.6.0
       eslint-config-two-stroke:
         specifier: ^1.5.4
-        version: 1.5.6(@types/eslint@9.6.1)(eslint@10.6.0)(prettier@3.9.4)(ts-declaration-location@1.0.7(typescript@6.0.3))(typescript@6.0.3)
+        version: 1.5.7(@types/eslint@9.6.1)(eslint@10.6.0)(prettier@3.9.4)(ts-declaration-location@1.0.7(typescript@6.0.3))(typescript@6.0.3)
       two-stroke:
         specifier: ^7.6.6
         version: 7.7.1(@sentry/cli@2.58.2(encoding@0.1.13))(@types/eslint@9.6.1)(eslint@10.6.0)(prettier@3.9.4)(ts-declaration-location@1.0.7(typescript@6.0.3))(typescript@6.0.3)(vitest@4.1.9(@opentelemetry/api@1.9.1)(@types/node@26.1.0)(msw@2.14.6(@types/node@26.1.0)(typescript@6.0.3))(vite@7.3.1(@types/node@26.1.0)(yaml@2.9.0)))(wrangler@4.107.0)
@@ -1708,13 +1708,6 @@ packages:
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
-
-  eslint-config-two-stroke@1.5.6:
-    resolution: {integrity: sha512-5Hv4vBj4sqWrrbYqA6BUdlD0YmpUQahLszXH/F/vzzC6o4UsgeoVYUkRDnrlTzHfIQqHzGulMQXoHye05PZ40w==}
-    engines: {node: ^24.9.0}
-    peerDependencies:
-      eslint: '>=9'
-      prettier: '>=3'
 
   eslint-config-two-stroke@1.5.7:
     resolution: {integrity: sha512-cp05unNkHIXRaLRZGiuDWGxEiiWhHKd4TgNh+9afwoOneE85xSfbO481c7NpmKZid4M9ovBBISo6/h7wF5uIJA==}
@@ -4631,25 +4624,6 @@ snapshots:
   eslint-config-prettier@10.1.8(eslint@10.6.0):
     dependencies:
       eslint: 10.6.0
-
-  eslint-config-two-stroke@1.5.6(@types/eslint@9.6.1)(eslint@10.6.0)(prettier@3.9.4)(ts-declaration-location@1.0.7(typescript@6.0.3))(typescript@6.0.3):
-    dependencies:
-      '@eslint/compat': 2.1.0(eslint@10.6.0)
-      '@eslint/js': 10.0.1(eslint@10.6.0)
-      '@typescript-eslint/eslint-plugin': 8.62.1(@typescript-eslint/parser@8.62.1(eslint@10.6.0)(typescript@6.0.3))(eslint@10.6.0)(typescript@6.0.3)
-      '@typescript-eslint/parser': 8.62.1(eslint@10.6.0)(typescript@6.0.3)
-      eslint: 10.6.0
-      eslint-config-prettier: 10.1.8(eslint@10.6.0)
-      eslint-config-typescript: 3.0.0(@typescript-eslint/eslint-plugin@8.62.1(@typescript-eslint/parser@8.62.1(eslint@10.6.0)(typescript@6.0.3))(eslint@10.6.0)(typescript@6.0.3))(@typescript-eslint/parser@8.62.1(eslint@10.6.0)(typescript@6.0.3))(eslint@10.6.0)(typescript@6.0.3)
-      eslint-plugin-n: 18.2.1(eslint@10.6.0)(ts-declaration-location@1.0.7(typescript@6.0.3))(typescript@6.0.3)
-      eslint-plugin-prettier: 5.5.6(@types/eslint@9.6.1)(eslint-config-prettier@10.1.8(eslint@10.6.0))(eslint@10.6.0)(prettier@3.9.4)
-      prettier: 3.9.4
-      typescript-eslint: 8.62.1(eslint@10.6.0)(typescript@6.0.3)
-    transitivePeerDependencies:
-      - '@types/eslint'
-      - supports-color
-      - ts-declaration-location
-      - typescript
 
   eslint-config-two-stroke@1.5.7(@types/eslint@9.6.1)(eslint@10.6.0)(prettier@3.9.4)(ts-declaration-location@1.0.7(typescript@6.0.3))(typescript@6.0.3):
     dependencies:
