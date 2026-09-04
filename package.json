@@ -44,7 +44,7 @@
     "libpg-query": "17.1.1"
   },
   "dependencies": {
-    "@supabase/postgres-meta": "^0.98.0",
+    "@supabase/postgres-meta": "^0.99.0",
     "json-schema-to-typescript": "^16.0.0",
     "prettier": "^3.8.2"
   }
