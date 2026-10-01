@@ -18,7 +18,6 @@
     "oxfmt": "^0.71.0"
   },
   "devDependencies": {
-    "@types/eslint": "^9.6.1",
     "oxlint": "^1.86.0",
     "oxlint-tsgolint": "^7.0.2003",
     "two-stroke": "^8.4.0",

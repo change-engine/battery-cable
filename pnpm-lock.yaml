@@ -21,9 +21,6 @@ importers:
         specifier: ^0.71.0
         version: 0.71.0
     devDependencies:
-      '@types/eslint':
-        specifier: ^9.6.1
-        version: 9.6.1
       oxlint:
         specifier: ^1.86.0
         version: 1.86.0(oxlint-tsgolint@7.0.2003)
@@ -1747,9 +1744,6 @@ packages:
 
   '@types/deep-eql@4.0.2':
     resolution: {integrity: sha512-c9h9dVVMigMPc4bwTvC5dxqtqJZwQPePsWjPlpSOnojbor6pGqdk541lfA7AqFQr5pB1BRdq0juY9db81BwyFw==}
-
-  '@types/eslint@9.6.1':
-    resolution: {integrity: sha512-FXx2pKgId/WyYo2jXw63kk7/+TY7u7AziEJxJAnSFzHlqTAS3Ync6SvgYAN/k4/PQpnnVuzoMuVnByKK2qp0ag==}
 
   '@types/estree@1.0.9':
     resolution: {integrity: sha512-GhdPgy1el4/ImP05X05Uw4cw2/M93BCUmnEvWZNStlCzEKME4Fkk+YpoA5OiHNQmoS7Cafb8Xa3Pya8m1Qrzeg==}
@@ -4647,11 +4641,6 @@ snapshots:
       '@types/node': 26.6.3
 
   '@types/deep-eql@4.0.2': {}
-
-  '@types/eslint@9.6.1':
-    dependencies:
-      '@types/estree': 1.0.9
-      '@types/json-schema': 7.0.15
 
   '@types/estree@1.0.9': {}
 
