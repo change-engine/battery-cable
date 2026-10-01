@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@types/eslint": "^9.6.1",
+    "oxlint": "^1.86.0",
     "two-stroke": "^8.4.0",
     "typescript": "^7.0.2",
     "vitest": "^5.0.2"
