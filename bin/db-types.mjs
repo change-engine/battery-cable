@@ -680,6 +680,8 @@ export interface DatabaseWithOptions {
 `,
 );
 
+// Unlike prettier, oxfmt returns parse errors instead of throwing, so fail here
+// rather than write invalid output.
 if (errors.length > 0) throw new Error(errors.map(({ message }) => message).join("\n"));
 
 fs.writeFileSync("src/__definitions__/database-definitions.ts", code);
