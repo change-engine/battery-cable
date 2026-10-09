@@ -15,7 +15,7 @@
   "dependencies": {
     "@supabase/postgres-meta": "^0.99.0",
     "json-schema-to-typescript": "^16.0.0",
-    "oxfmt": "^0.71.0"
+    "oxfmt": "^0.72.0"
   },
   "devDependencies": {
     "oxlint": "^1.86.0",
