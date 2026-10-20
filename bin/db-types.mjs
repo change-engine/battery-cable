@@ -55,6 +55,10 @@ const replaceLast = (txt, find, replace) => {
   return txt.substring(0, index) + replace + txt.substring(index + find.length);
 };
 
+// Overrides and TYPE: comments may already end in "| null"; only the trailing one counts, as an
+// inner one can belong to a nested field.
+const withNull = (type) => (type.endsWith(" | null") ? type : `${type} | null`);
+
 const jsonSchemaToTsType = async (jsonSchema) => {
   const result = await compile(JSON.parse(jsonSchema), "MySchema", {
     bannerComment: "",
@@ -117,14 +121,15 @@ ${relationshipsForView.join("\n")}
       };`;
 };
 
-const columnToTsType = async (c, types, read = true) =>
-  !read && c.identity_generation === "ALWAYS"
-    ? "never"
-    : (c.comment?.startsWith("TYPE: ")
-        ? c.comment.substring(6)
-        : c.comment?.startsWith("JSON_SCHEMA: ")
-          ? await jsonSchemaToTsType(c.comment.substring(12))
-          : pgTypeToTsType(c.format, types)) + (c.is_nullable ? " | null" : "");
+const columnToTsType = async (c, types, read = true) => {
+  if (!read && c.identity_generation === "ALWAYS") return "never";
+  const type = c.comment?.startsWith("TYPE: ")
+    ? c.comment.substring(6)
+    : c.comment?.startsWith("JSON_SCHEMA: ")
+      ? await jsonSchemaToTsType(c.comment.substring(12))
+      : pgTypeToTsType(c.format, types);
+  return c.is_nullable ? withNull(type) : type;
+};
 
 const ok = async (r) => {
   const { data, error } = await r;
@@ -389,7 +394,7 @@ ${sortedArgsNameAndType
                   const cols = sortedTableArgs.map(({ name, type_id }) => {
                     if (typeOverrides[name] !== undefined) {
                       const type = typeOverrides[name];
-                      return `          ${name}: ${nonNull.has(name) ? type : `${type} | null`};`;
+                      return `          ${name}: ${nonNull.has(name) ? type : withNull(type)};`;
                     }
 
                     const base = pgTypeToTsType(
@@ -424,9 +429,7 @@ ${cols.join("\n")}
 
                         if (typeOverrides[name] !== undefined) {
                           const type = typeOverrides[name];
-                          return `          ${name}: ${
-                            nonNull.has(name) ? type : `${type} | null`
-                          };`;
+                          return `          ${name}: ${nonNull.has(name) ? type : withNull(type)};`;
                         }
 
                         const base = await columnToTsType(column, types);
