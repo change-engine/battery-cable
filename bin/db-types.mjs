@@ -135,7 +135,7 @@ const ok = async (r) => {
 const pgMeta = new PostgresMeta({
   connectionString: process.env.DATABASE_URL ?? "postgres://postgres:postgres@0.0.0.0:54322",
 });
-const [schemas, tables, views, materializedViews, functions, types, relationships] =
+const [schemas, tables, views, materializedViews, functions, types, allRelationships] =
   await Promise.all([
     ok(pgMeta.schemas.list()),
     ok(pgMeta.tables.list()),
@@ -150,6 +150,20 @@ const [schemas, tables, views, materializedViews, functions, types, relationship
     ),
     ok(pgMeta.relationships.list()),
   ]);
+
+// A view is given a copy of every foreign key into each key column it exposes, so one that shows a
+// parent's id gets every foreign key to that parent. Keep only the copies that reach the view
+// through its own id, which make it a stand-in for the table it takes its id from. PostgREST still
+// embeds through the rest, but each deepens the select types postgrest-js builds until TypeScript
+// gives up on them.
+const viewNames = new Set(
+  [...views, ...materializedViews].map(({ schema, name }) => `${schema}.${name}`),
+);
+const relationships = allRelationships.filter(
+  (rel) =>
+    !viewNames.has(`${rel.referenced_schema}.${rel.referenced_relation}`) ||
+    rel.referenced_columns.includes("id"),
+);
 
 const functionComments = await ok(
   pgMeta.query(`
