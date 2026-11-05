@@ -12,5 +12,7 @@ updates:
     schedule:
       interval: "daily"
       time: "04:19"
+    cooldown:
+      default-days: 3
     ignore:
       - dependency-name: "wrangler"
