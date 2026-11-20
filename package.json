@@ -13,17 +13,17 @@
   "type": "module",
   "main": "bin/db-types.mjs",
   "dependencies": {
-    "@supabase/postgres-meta": "^0.100.0",
+    "@supabase/postgres-meta": "^0.100.1",
     "json-schema-to-typescript": "^16.0.0",
     "oxfmt": "^0.79.0"
   },
   "devDependencies": {
-    "knip": "^6.44.0",
-    "oxlint": "^1.90.0",
-    "oxlint-tsgolint": "^7.0.2005",
-    "two-stroke": "^8.11.1",
+    "knip": "^6.45.1",
+    "oxlint": "^1.94.0",
+    "oxlint-tsgolint": "^7.0.2007",
+    "two-stroke": "^8.12.0",
     "typescript": "^7.0.2",
-    "vitest": "^5.0.5"
+    "vitest": "^5.1.0"
   },
   "resolutions": {
     "libpg-query": "17.1.1"
